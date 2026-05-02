@@ -1,0 +1,25 @@
+.instArea { display: flex; flex-direction: column; gap: 9px; }
+
+.catLabel {
+  font-family: var(--font-mono); font-size: 0.52rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--dim); margin-bottom: 4px; opacity: 0.7;
+}
+.catChips { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.ic {
+  font-family: var(--font-mono); font-size: 0.6rem;
+  padding: 4px 9px; border-radius: 4px;
+  border: 1px solid var(--border); background: var(--bg3);
+  color: var(--dim); cursor: pointer;
+  transition: all 0.14s; user-select: none;
+}
+.ic:hover { border-color: var(--border2); color: var(--cream); }
+
+/* Active states per category */
+.onLead    { border-color: var(--blue);     color: var(--blue);     background: rgba(108,160,232,0.09); }
+.onHarmony { border-color: var(--lavender); color: var(--lavender); background: rgba(168,140,232,0.07); }
+.onRhythm  { border-color: var(--rose);     color: var(--rose);     background: rgba(232,122,106,0.07); }
+.onBass    { border-color: var(--gold2);    color: var(--gold);     background: rgba(232,201,106,0.07); }
+.onTexture { border-color: var(--teal);     color: var(--teal);     background: rgba(94,207,192,0.08);  }
+.onEnergy  { border-color: var(--sage);     color: var(--sage);     background: rgba(122,191,144,0.07); }

@@ -1,0 +1,44 @@
+.container { position: relative; }
+
+.trigger {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 6px; padding: 9px 11px;
+  cursor: pointer; transition: all 0.14s; text-align: left;
+}
+.trigger:hover { border-color: var(--border2); }
+.triggerOpen { border-color: var(--blue); background: rgba(108,160,232,0.06); }
+
+.triggerText { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.triggerName {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--blue); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.triggerDesc { font-size: 0.58rem; color: var(--dim); line-height: 1.3; }
+.triggerChevron {
+  font-size: 0.6rem; color: var(--dim); flex-shrink: 0;
+  transition: transform 0.16s;
+}
+.triggerOpen .triggerChevron { transform: rotate(180deg); }
+
+.dropdown {
+  position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 20;
+  background: var(--panel2); border: 1px solid var(--border2);
+  border-radius: 8px; overflow-y: auto; max-height: 260px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.progItem {
+  padding: 9px 11px; cursor: pointer; transition: background 0.12s;
+  border-bottom: 1px solid var(--border);
+}
+.progItem:last-child { border-bottom: none; }
+.progItem:hover { background: rgba(108,160,232,0.06); }
+.active { background: rgba(108,160,232,0.09); }
+
+.progN {
+  font-family: var(--font-mono); font-size: 0.63rem;
+  color: var(--cream); margin-bottom: 1px;
+}
+.active .progN { color: var(--blue); }
+.progD { font-size: 0.58rem; color: var(--dim); line-height: 1.3; }

@@ -1,0 +1,139 @@
+.app {
+  position: relative; z-index: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px 260px;
+}
+
+.header {
+  padding: 44px 0 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo { display: flex; align-items: flex-end; gap: 16px; }
+
+.logoIcon {
+  font-size: 46px; line-height: 1;
+  filter: drop-shadow(0 0 18px rgba(232,201,106,0.55));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
+
+.logoText h1 {
+  font-family: var(--font-display);
+  font-size: 3rem; letter-spacing: 0.06em;
+  color: var(--gold); line-height: 1;
+}
+.logoText p {
+  font-family: var(--font-mono);
+  font-size: 0.6rem; color: var(--dim);
+  letter-spacing: 0.22em; text-transform: uppercase; margin-top: 5px;
+}
+
+.headerBadge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem; color: var(--dim);
+  letter-spacing: 0.14em; text-align: right; line-height: 2;
+}
+.headerBadge b { color: var(--blue); font-weight: 400; }
+
+.secHead {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+}
+.secHead h2 {
+  font-family: var(--font-display);
+  font-size: 0.85rem; letter-spacing: 0.3em; color: var(--dim);
+  white-space: nowrap;
+}
+.secLine { flex: 1; height: 1px; background: var(--border); }
+
+.surpriseBar {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 28px;
+}
+
+.surpriseBtn {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 0.65rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 9px 18px; border-radius: 6px;
+  background: rgba(232,201,106,0.07);
+  border: 1px solid var(--gold2);
+  color: var(--gold); cursor: pointer;
+  transition: all 0.16s; white-space: nowrap;
+}
+.surpriseBtn:hover {
+  background: rgba(232,201,106,0.14);
+  border-color: var(--gold);
+  box-shadow: 0 0 16px rgba(232,201,106,0.18);
+}
+
+.surpriseDice { font-size: 1rem; line-height: 1; }
+
+.presetsBtn {
+  display: flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono); font-size: 0.65rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 9px 18px; border-radius: 6px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--dim); cursor: pointer;
+  transition: all 0.16s; white-space: nowrap;
+}
+.presetsBtn:hover {
+  background: rgba(232,201,106,0.07);
+  border-color: var(--gold2);
+  color: var(--gold);
+}
+.presetsBtnActive {
+  background: rgba(232,201,106,0.07);
+  border-color: var(--gold2);
+  color: var(--gold);
+}
+.presetsBtnActive:hover {
+  background: rgba(232,201,106,0.13);
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(232,201,106,0.15);
+}
+
+.surpriseHint {
+  font-family: var(--font-mono); font-size: 0.55rem;
+  color: var(--dim); letter-spacing: 0.12em;
+}
+
+.sectionsArea { display: flex; flex-direction: column; gap: 12px; margin-bottom: 14px; }
+
+.addBar {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 16px;
+  background: var(--panel); border: 1px dashed rgba(100,140,220,0.18);
+  border-radius: 10px; cursor: pointer;
+  transition: all 0.18s; margin-bottom: 44px;
+}
+.addBar:hover { border-color: rgba(100,140,220,0.38); background: var(--panel2); }
+.addPlus { font-family: var(--font-mono); font-size: 1.1rem; color: var(--blue2); }
+.addLbl {
+  font-family: var(--font-mono); font-size: 0.62rem;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--dim);
+}
+
+.toast {
+  position: fixed; bottom: 180px; right: 22px;
+  background: var(--panel2); border: 1px solid var(--blue);
+  color: var(--blue); font-family: var(--font-mono);
+  font-size: 0.62rem; letter-spacing: 0.1em;
+  padding: 8px 14px; border-radius: 4px;
+  opacity: 0; transform: translateY(6px);
+  transition: all 0.18s; z-index: 200; pointer-events: none;
+}
+.toastShow { opacity: 1; transform: translateY(0); }

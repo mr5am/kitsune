@@ -1,0 +1,89 @@
+.globalRow {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px; margin-bottom: 44px;
+}
+
+.gControl {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.gLabelRow {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 9px;
+}
+
+.gLabel {
+  font-family: var(--font-mono);
+  font-size: 0.55rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--dim);
+}
+
+.bpmValue {
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--gold); letter-spacing: 0.04em;
+}
+
+.bpmSlider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  border-radius: 1px;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    var(--gold) var(--pct),
+    rgba(100,140,220,0.2) var(--pct)
+  );
+  margin-top: 2px;
+}
+.bpmSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--bg);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(232,201,106,0.45);
+  transition: box-shadow 0.14s;
+}
+.bpmSlider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 14px rgba(232,201,106,0.7);
+}
+.bpmSlider::-moz-range-thumb {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--bg);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(232,201,106,0.45);
+}
+.bpmSlider::-moz-range-track {
+  height: 2px; border-radius: 1px;
+  background: rgba(100,140,220,0.2);
+}
+
+.gChips { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.chip {
+  font-family: var(--font-mono); font-size: 0.63rem;
+  padding: 4px 10px; border-radius: 4px;
+  border: 1px solid var(--border); background: var(--bg3);
+  color: var(--dim); cursor: pointer;
+  transition: all 0.14s; user-select: none;
+}
+.chip:hover { border-color: var(--border2); color: var(--cream); }
+
+.chipOnGold { background: rgba(232,201,106,0.11); border-color: var(--gold); color: var(--gold); }
+.chipOnBlue { background: rgba(108,160,232,0.11); border-color: var(--blue); color: var(--blue); }
+
+@media (max-width: 860px) {
+  .globalRow { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+  .globalRow { grid-template-columns: 1fr; }
+}

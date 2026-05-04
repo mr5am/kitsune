@@ -29,6 +29,7 @@
 }
 
 .progItem {
+  position: relative;
   padding: 9px 11px; cursor: pointer; transition: background 0.12s;
   border-bottom: 1px solid var(--border);
 }
@@ -57,6 +58,19 @@
   background: rgba(108,160,232,0.07);
   border: 1px solid var(--border2); border-radius: 4px;
   display: flex; flex-direction: column; gap: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tooltip {
+    position: absolute;
+    right: 30px;
+    top: 4px;
+    margin-top: 0;
+    min-width: 220px;
+    z-index: 35;
+    background: var(--panel2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  }
 }
 .tooltipFeel {
   font-size: 0.58rem; color: var(--blue);

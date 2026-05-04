@@ -44,6 +44,8 @@ export default function ProgPicker({ selectedProg, onSelect }) {
                 key={p.id}
                 className={`${styles.progItem}${selectedProg === p.id ? ' ' + styles.active : ''}`}
                 onClick={() => handleSelect(p.id)}
+                onMouseEnter={() => hasTooltip && setOpenTooltipId(p.id)}
+                onMouseLeave={() => hasTooltip && setOpenTooltipId(null)}
               >
                 <div className={styles.progRow}>
                   <div className={styles.progN}>{p.name}</div>
@@ -51,8 +53,6 @@ export default function ProgPicker({ selectedProg, onSelect }) {
                     <button
                       className={styles.infoBtn}
                       onClick={e => { e.stopPropagation(); setOpenTooltipId(openTooltipId === p.id ? null : p.id); }}
-                      onMouseEnter={() => setOpenTooltipId(p.id)}
-                      onMouseLeave={() => setOpenTooltipId(null)}
                     >ⓘ</button>
                   )}
                 </div>

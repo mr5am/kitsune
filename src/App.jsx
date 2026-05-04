@@ -372,11 +372,11 @@ export default function App() {
           <div className={styles.logoIcon}>🦊</div>
           <div className={styles.logoText}>
             <h1>Kitsune</h1>
-            <p>Anime Music Composer · Suno 5.5</p>
+            <p>Anime Music Composer for Suno</p>
           </div>
         </div>
         <div className={styles.headerBadge}>
-          Tool <b>Suno 5.5</b> · Mode <b>Instrumental</b><br />
+          Tool <b>Suno AI</b> · Mode <b>Instrumental</b><br />
           Output <b>Style · Exclude · Lyrics</b>
         </div>
       </header>

@@ -1,4 +1,4 @@
-import { INST_POOL, CATS } from '../data';
+import { CATS } from '../data';
 import styles from './InstLayers.module.css';
 
 const CAT_ON_CLASS = {
@@ -10,14 +10,14 @@ const CAT_ON_CLASS = {
   energy:  styles.onEnergy,
 };
 
-export default function InstLayers({ inst, onToggle }) {
+export default function InstLayers({ inst, onToggle, instPool }) {
   return (
     <div className={styles.instArea}>
       {Object.entries(CATS).map(([cat, cd]) => (
         <div key={cat}>
           <div className={styles.catLabel}>{cd.label}</div>
           <div className={styles.catChips}>
-            {INST_POOL[cat].map(item => {
+            {(instPool[cat] || []).map(item => {
               const on = inst[cat].includes(item);
               return (
                 <div

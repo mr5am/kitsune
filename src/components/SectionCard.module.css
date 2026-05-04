@@ -60,7 +60,9 @@
   transition: all 0.14s; line-height: 1;
 }
 .iconBtn:hover { color: var(--cream); background: rgba(255,255,255,0.05); }
-.del:hover { color: var(--rose); }
+.dice:hover { color: var(--teal); }
+.dup:hover  { color: var(--blue); }
+.del:hover  { color: var(--rose); }
 .ssChevron { font-size: 0.65rem; color: var(--dim); transition: transform 0.2s; margin-left: 2px; }
 .open .ssChevron { transform: rotate(180deg); }
 

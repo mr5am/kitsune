@@ -34,21 +34,24 @@ export const TYPES = [
 ];
 
 export const PROGS = [
-  { id: 'royal-road',    name: 'Royal Road',          sunoStyle: 'warm yearning chord loop, bittersweet lift and settle, strings rising then resolving',                               lyricTag: 'warm resolving harmony',          desc: 'Warm lift and settle · the yearning anime arc' },
-  { id: 'secondary-dom', name: 'Hidden Pull',         sunoStyle: 'unexpected emotional chord colour, tension pull toward resolution, sudden harmonic warmth',                          lyricTag: 'emotional harmonic pull',         desc: 'Unexpected chord tug · sudden harmonic warmth' },
-  { id: 'anime-prog',    name: 'Anime Arc',           sunoStyle: 'uneasy opening chord, darkness lifting into wonder, tension unfolding into light',                                   lyricTag: 'dark-to-wonder harmonic arc',     desc: 'Opens in shadow, brightens into wonder' },
-  { id: 'line-cliche',   name: 'Inner Shimmer',       sunoStyle: 'inner melody creeping upward by half steps, stillness with subtle internal motion, shimmer underneath',             lyricTag: 'slow inner voice shimmer',        desc: 'Hidden voice creeping upward · shimmer beneath' },
-  { id: 'modulation',    name: 'Colour Shift',        sunoStyle: 'key shifting upward, mood darkening, tonal landscape changing colour',                                               lyricTag: 'key colour shift',                desc: 'The whole key changes emotional colour' },
-  { id: 'black-adder',   name: 'Black Adder',         sunoStyle: 'sudden dramatic chord stab, sharp unexpected harmonic peak, one tense hit then release',                            lyricTag: 'dramatic harmonic stab',          desc: 'One jarring peak chord · maximum drama' },
-  { id: 'flat-six',      name: 'Dark Cadence',        sunoStyle: 'descending dark chord pull, minor colour, heavy emotional landing, melancholic cadence',                            lyricTag: 'dark descending cadence',         desc: 'Heavy chords falling to resolution · dark emotion' },
-  { id: 'axis',          name: 'The Axis',            sunoStyle: 'gentle circular chord movement, bittersweet longing, minor opening into warm major settling',                       lyricTag: 'bittersweet circular motion',     desc: 'The J-pop loop · bittersweet and circular' },
-  { id: 'andalusian',    name: 'Andalusian Descent',  sunoStyle: 'chords stepping downward one by one, brooding descent, ground sinking beneath the melody',                          lyricTag: 'dark descending steps',           desc: 'Chords stepping downward · brooding descent' },
-  { id: 'nat-minor',     name: 'Shadow Descent',      sunoStyle: 'heavy minor chords falling in sequence, aeolian sadness, slow dark pull downward',                                  lyricTag: 'melancholic minor fall',          desc: 'Heavier dark fall · aeolian sadness' },
-  { id: 'canon',         name: 'Canon Flow',          sunoStyle: 'gentle cascading chords, warm even forward motion, tender unfolding sequence',                                       lyricTag: 'warm cascading sequence',         desc: 'Tender cascading chords · familiar forward warmth' },
-  { id: 'neapolitan',    name: 'Grand Arrival',       sunoStyle: 'half-step surprise chord before the landing, sudden tension then grand arrival, classical dramatic resolution',      lyricTag: 'grand surprise resolution',       desc: 'Surprise chord before the landing · classical drama' },
-  { id: 'minor-plagal',  name: 'The Sigh',            sunoStyle: 'minor chord sighing into major, emotional weight releasing, dark-to-light exhale',                                  lyricTag: 'emotional dark-to-light sigh',    desc: 'One dark chord exhaling into warmth' },
-  { id: 'phrygian',      name: 'Ancient Shadow',      sunoStyle: 'ancient dark modal colour, unresolved minor tension, mysterious brooding shadow',                                    lyricTag: 'dark modal shadow',               desc: 'Ancient, unresolved darkness · brooding modal' },
-  { id: 'yonezu',        name: 'Yonezu Lift',         sunoStyle: 'unexpected bright chord leap upward, modern emotional colour shift, pop harmonic surprise',                          lyricTag: 'bright pop harmonic lift',        desc: 'Sudden bright leap then emotional settle' },
+  { id: 'royal-road',    name: 'Royal Road',          sunoStyle: 'warm yearning chord loop, bittersweet lift and settle, strings rising then resolving',                               lyricTag: 'warm resolving harmony',          desc: 'Warm lift and settle · the yearning anime arc',            feel: 'yearning',     reference: 'Your Lie in April OP' },
+  { id: 'secondary-dom', name: 'Hidden Pull',         sunoStyle: 'unexpected emotional chord colour, tension pull toward resolution, sudden harmonic warmth',                          lyricTag: 'emotional harmonic pull',         desc: 'Unexpected chord tug · sudden harmonic warmth',            feel: 'longing',      reference: 'Anohana ED' },
+  { id: 'anime-prog',    name: 'Anime Arc',           sunoStyle: 'uneasy opening chord, darkness lifting into wonder, tension unfolding into light',                                   lyricTag: 'dark-to-wonder harmonic arc',     desc: 'Opens in shadow, brightens into wonder',                   feel: 'wonder',       reference: 'Neon Genesis Evangelion OP' },
+  { id: 'line-cliche',   name: 'Inner Shimmer',       sunoStyle: 'inner melody creeping upward by half steps, stillness with subtle internal motion, shimmer underneath',             lyricTag: 'slow inner voice shimmer',        desc: 'Hidden voice creeping upward · shimmer beneath',           feel: 'stillness',    reference: 'Mushishi OST' },
+  { id: 'modulation',    name: 'Colour Shift',        sunoStyle: 'key shifting upward, mood darkening, tonal landscape changing colour',                                               lyricTag: 'key colour shift',                desc: 'The whole key changes emotional colour',                   feel: 'dread',        reference: 'Attack on Titan OST' },
+  { id: 'black-adder',   name: 'Black Adder',         sunoStyle: 'sudden dramatic chord stab, sharp unexpected harmonic peak, one tense hit then release',                            lyricTag: 'dramatic harmonic stab',          desc: 'One jarring peak chord · maximum drama',                   feel: 'shock',        reference: 'Demon Slayer OST' },
+  { id: 'flat-six',      name: 'Dark Cadence',        sunoStyle: 'descending dark chord pull, minor colour, heavy emotional landing, melancholic cadence',                            lyricTag: 'dark descending cadence',         desc: 'Heavy chords falling to resolution · dark emotion',        feel: 'grief',        reference: 'Violet Evergarden OST' },
+  { id: 'axis',          name: 'The Axis',            sunoStyle: 'gentle circular chord movement, bittersweet longing, minor opening into warm major settling',                       lyricTag: 'bittersweet circular motion',     desc: 'The J-pop loop · bittersweet and circular',                feel: 'bittersweet',  reference: 'Bakemonogatari OP' },
+  { id: 'andalusian',    name: 'Andalusian Descent',  sunoStyle: 'chords stepping downward one by one, brooding descent, ground sinking beneath the melody',                          lyricTag: 'dark descending steps',           desc: 'Chords stepping downward · brooding descent',              feel: 'brooding',     reference: 'Re:Zero OST' },
+  { id: 'nat-minor',     name: 'Shadow Descent',      sunoStyle: 'heavy minor chords falling in sequence, aeolian sadness, slow dark pull downward',                                  lyricTag: 'melancholic minor fall',          desc: 'Heavier dark fall · aeolian sadness',                      feel: 'melancholy',   reference: 'Your Name OST' },
+  { id: 'canon',         name: 'Canon Flow',          sunoStyle: 'gentle cascading chords, warm even forward motion, tender unfolding sequence',                                       lyricTag: 'warm cascading sequence',         desc: 'Tender cascading chords · familiar forward warmth',        feel: 'warmth',       reference: 'Clannad OST' },
+  { id: 'neapolitan',    name: 'Grand Arrival',       sunoStyle: 'half-step surprise chord before the landing, sudden tension then grand arrival, classical dramatic resolution',      lyricTag: 'grand surprise resolution',       desc: 'Surprise chord before the landing · classical drama',      feel: 'triumph',      reference: 'Gurren Lagann OP' },
+  { id: 'minor-plagal',  name: 'The Sigh',            sunoStyle: 'minor chord sighing into major, emotional weight releasing, dark-to-light exhale',                                  lyricTag: 'emotional dark-to-light sigh',    desc: 'One dark chord exhaling into warmth',                      feel: 'release',      reference: 'March Comes in Like a Lion OST' },
+  { id: 'phrygian',      name: 'Ancient Shadow',      sunoStyle: 'ancient dark modal colour, unresolved minor tension, mysterious brooding shadow',                                    lyricTag: 'dark modal shadow',               desc: 'Ancient, unresolved darkness · brooding modal',            feel: 'mystery',      reference: 'Made in Abyss OST' },
+  { id: 'yonezu',        name: 'Yonezu Lift',         sunoStyle: 'unexpected bright chord leap upward, modern emotional colour shift, pop harmonic surprise',                          lyricTag: 'bright pop harmonic lift',        desc: 'Sudden bright leap then emotional settle',                 feel: 'euphoria',     reference: 'Chainsaw Man OP' },
+  { id: 'dorian',        name: 'Dorian Arc',          sunoStyle: 'dorian modal colour, minor key lifted by major fourth chord, melancholic warmth refusing pure darkness',              lyricTag: 'dorian bittersweet arc',          desc: 'Minor with a raised sixth · bittersweet refusal of dark',  feel: 'melancholic',  reference: 'Nier Automata — Weight of the World' },
+  { id: 'pedal-void',    name: 'Pedal Void',          sunoStyle: 'held bass pedal note anchoring ground, shifting chords floating above, static drone beneath drifting harmony',       lyricTag: 'suspended pedal harmony',         desc: 'Bass holds still · chords drift above like smoke',         feel: 'suspended',    reference: 'Nier Automata — City Ruins' },
+  { id: 'chromatic-sink', name: 'Chromatic Sink',     sunoStyle: 'chromatic half-step descent in the bass, dark creeping downward motion, ground eroding beneath static harmony',      lyricTag: 'chromatic bass descent',          desc: 'Ground falls away · half-step by half-step into dark',     feel: 'dread',        reference: 'Nier Automata — Alien Manifestation' },
 ];
 
 export const CATS = {
@@ -61,17 +64,25 @@ export const CATS = {
 };
 
 export const INST_POOL = {
-  lead:    ['nylon string melody', 'bright pizzicato strings', 'soaring violin line', 'piano accent line', 'synth lead layer', 'flute ornament', 'viola phrase', 'overdriven electric guitar lead', 'clean electric guitar riff'],
-  harmony: ['string arpeggios', 'slow string pads', 'warm synth pads', 'pizzicato strings', 'tremolo strings', 'lush orchestral strings', 'ambient breath pads', 'organ wash'],
-  rhythm:  ['lazy shuffled drums', 'four-on-floor kick', 'snapped claps', 'soft claps', 'punched snare', 'syncopated hi-hats', 'brushed snare', 'half-time feel', 'driving rock drums'],
-  bass:    ['dubstep bass pulse', 'warm sub bass', 'walking bass', 'pizzicato bass', 'soft dubstep sub', 'deep low rumble', 'upright bass feel', 'distorted bass guitar'],
-  texture: ['vinyl crackle', 'tape hiss', 'dusty vintage drums', 'reverse swells', 'golden shimmer', 'warm room reverb', 'subtle noise floor', 'guitar amp distortion'],
-  energy:  ['orchestral swell', 'dramatic build', 'gentle energy lift', 'explosive release', 'tension riser', 'warm golden fade', 'soft morning light feel', 'airy lift'],
+  lead:    ['nylon string melody', 'bright pizzicato strings', 'soaring violin line', 'piano accent line', 'synth lead layer', 'flute ornament', 'viola phrase', 'overdriven electric guitar lead', 'clean electric guitar riff', 'sparse solo piano', 'sul ponticello violin', 'recorder melody'],
+  harmony: ['string arpeggios', 'slow string pads', 'warm synth pads', 'pizzicato strings', 'tremolo strings', 'lush orchestral strings', 'ambient breath pads', 'organ wash', 'operatic synth choir', 'open fifth string cluster', 'harp arpeggios'],
+  rhythm:  ['lazy shuffled drums', 'four-on-floor kick', 'snapped claps', 'soft claps', 'punched snare', 'syncopated hi-hats', 'brushed snare', 'half-time feel', 'driving rock drums', 'mechanical clock pulse', 'orchestral percussion hits'],
+  bass:    ['dubstep bass pulse', 'warm sub bass', 'walking bass', 'pizzicato bass', 'soft dubstep sub', 'deep low rumble', 'upright bass feel', 'distorted bass guitar', 'contrabass pedal drone'],
+  texture: ['vinyl crackle', 'tape hiss', 'dusty vintage drums', 'reverse swells', 'golden shimmer', 'warm room reverb', 'subtle noise floor', 'guitar amp distortion', 'digital glitch artifacts', 'cathedral reverb wash'],
+  energy:  ['orchestral swell', 'dramatic build', 'gentle energy lift', 'explosive release', 'tension riser', 'warm golden fade', 'soft morning light feel', 'airy lift', 'haunting suspension'],
 };
 
 export const FEELS = ['gentle', 'warm', 'intense', 'dark', 'euphoric'];
 
 export const FEEL_WORDS = { gentle: 'soft', warm: 'warm', intense: 'driving', dark: 'tense', euphoric: 'soaring' };
+
+export const FEEL_CAMERA = {
+  gentle:   'slow pan, natural light, soft focus',
+  warm:     'slow tracking shot, soft natural light',
+  intense:  'quick cuts, high contrast, wide angle',
+  dark:     'static long shot, low key lighting',
+  euphoric: 'tracking shot, wide angle, golden hour',
+};
 
 export const EXCLUDE = `thin bell lead, celesta, glockenspiel, music box, soft lullaby piano, koto, shamisen, folk instruments, choir vocals, singing, trap, 8-bit, chiptune, acoustic guitar, new age, slow ballad, sleepy, ambient only, harsh distortion, heavy metal`;
 
@@ -91,6 +102,8 @@ export const LEAD_OPTS = [
   { v: 'warm nylon string guitar lead',  label: 'Nylon Guitar' },
   { v: 'clean bright synth lead',        label: 'Bright Synth' },
   { v: 'overdriven electric guitar lead', label: 'Electric Guitar' },
+  { v: 'sparse solo piano lead',         label: 'Sparse Piano' },
+  { v: 'sul ponticello string lead',     label: 'Sul Ponticello' },
 ];
 
 export const MOOD_OPTS = [
@@ -208,6 +221,41 @@ export const PRESETS = [
     ],
   },
   {
+    id: 'nier-city-ruins', name: 'City Ruins', artist: 'Nier Automata',
+    desc: 'Sparse piano over ruins — Dorian melancholy, open strings, operatic choir swell',
+    bpm: '96', theme: 'cinematic orchestral anime soundtrack, dramatic score', lead: 'sparse solo piano lead', mood: 'dark tense',
+    sections: [
+      { typeId: 'intro',   prog: 'pedal-void',      feel: 'dark',    endingType: null, inst: { lead: [], harmony: ['open fifth string cluster', 'ambient breath pads'], rhythm: [], bass: ['contrabass pedal drone'], texture: ['cathedral reverb wash'], energy: [] } },
+      { typeId: 'verse',   prog: 'dorian',           feel: 'dark',    endingType: null, inst: { lead: ['sparse solo piano'], harmony: ['open fifth string cluster', 'harp arpeggios'], rhythm: [], bass: ['contrabass pedal drone'], texture: [], energy: [] } },
+      { typeId: 'develop', prog: 'dorian',           feel: 'intense', endingType: null, inst: { lead: ['sul ponticello violin'], harmony: ['tremolo strings', 'open fifth string cluster'], rhythm: ['orchestral percussion hits'], bass: ['contrabass pedal drone'], texture: [], energy: ['dramatic build'] } },
+      { typeId: 'chorus',  prog: 'flat-six',         feel: 'intense', endingType: null, inst: { lead: ['soaring violin line', 'sparse solo piano'], harmony: ['lush orchestral strings', 'operatic synth choir'], rhythm: ['orchestral percussion hits', 'half-time feel'], bass: ['contrabass pedal drone'], texture: [], energy: ['orchestral swell', 'haunting suspension'] } },
+      { typeId: 'outro',   prog: 'pedal-void',       feel: 'dark',    endingType: 'dissolve', inst: { lead: ['sparse solo piano'], harmony: ['slow string pads', 'ambient breath pads'], rhythm: [], bass: ['contrabass pedal drone'], texture: ['cathedral reverb wash'], energy: ['haunting suspension'] } },
+    ],
+  },
+  {
+    id: 'nier-machine', name: 'Machine Lifeform', artist: 'Nier Automata',
+    desc: 'Mechanical clock pulse over ruins — chromatic dread, glitch artifacts, cold stop',
+    bpm: '130', theme: 'cinematic orchestral anime soundtrack, dramatic score', lead: 'sul ponticello string lead', mood: 'dark tense',
+    sections: [
+      { typeId: 'intro',   prog: 'chromatic-sink',   feel: 'dark',    endingType: null, inst: { lead: [], harmony: ['ambient breath pads'], rhythm: ['mechanical clock pulse'], bass: ['contrabass pedal drone'], texture: ['digital glitch artifacts', 'subtle noise floor'], energy: [] } },
+      { typeId: 'develop', prog: 'phrygian',         feel: 'dark',    endingType: null, inst: { lead: ['sul ponticello violin'], harmony: ['tremolo strings', 'open fifth string cluster'], rhythm: ['mechanical clock pulse', 'half-time feel'], bass: ['deep low rumble'], texture: ['digital glitch artifacts'], energy: ['tension riser'] } },
+      { typeId: 'chorus',  prog: 'chromatic-sink',   feel: 'intense', endingType: null, inst: { lead: ['sul ponticello violin', 'soaring violin line'], harmony: ['lush orchestral strings', 'operatic synth choir'], rhythm: ['orchestral percussion hits', 'mechanical clock pulse'], bass: ['contrabass pedal drone'], texture: [], energy: ['explosive release', 'dramatic build'] } },
+      { typeId: 'bridge',  prog: 'pedal-void',       feel: 'dark',    endingType: null, inst: { lead: [], harmony: ['ambient breath pads', 'open fifth string cluster'], rhythm: [], bass: ['contrabass pedal drone'], texture: ['digital glitch artifacts', 'cathedral reverb wash'], energy: ['haunting suspension'] } },
+      { typeId: 'outro',   prog: 'chromatic-sink',   feel: 'dark',    endingType: 'cold', inst: { lead: [], harmony: ['slow string pads'], rhythm: ['mechanical clock pulse'], bass: ['contrabass pedal drone'], texture: ['digital glitch artifacts'], energy: [] } },
+    ],
+  },
+  {
+    id: 'nier-village', name: "Pascal's Village", artist: 'Nier Automata',
+    desc: 'Pastoral machine village — recorder over harp, gentle Dorian warmth, ambient dissolve',
+    bpm: '72', theme: 'cinematic orchestral anime soundtrack, dramatic score', lead: 'sparse solo piano lead', mood: 'serene nostalgic',
+    sections: [
+      { typeId: 'intro',   prog: 'dorian',           feel: 'gentle',  endingType: null, inst: { lead: [], harmony: ['harp arpeggios', 'string arpeggios'], rhythm: [], bass: [], texture: ['warm room reverb'], energy: ['soft morning light feel'] } },
+      { typeId: 'theme',   prog: 'dorian',           feel: 'warm',    endingType: null, inst: { lead: ['recorder melody'], harmony: ['harp arpeggios', 'open fifth string cluster'], rhythm: ['brushed snare'], bass: ['pizzicato bass'], texture: [], energy: [] } },
+      { typeId: 'chorus',  prog: 'canon',            feel: 'warm',    endingType: null, inst: { lead: ['recorder melody', 'flute ornament'], harmony: ['string arpeggios', 'slow string pads'], rhythm: ['soft claps'], bass: ['upright bass feel'], texture: [], energy: ['airy lift'] } },
+      { typeId: 'outro',   prog: 'dorian',           feel: 'gentle',  endingType: 'dissolve', inst: { lead: ['recorder melody'], harmony: ['harp arpeggios', 'ambient breath pads'], rhythm: [], bass: [], texture: ['warm room reverb', 'tape hiss'], energy: ['warm golden fade'] } },
+    ],
+  },
+  {
     id: 'eve', name: 'Eve', artist: 'JJK OP · Otogi',
     desc: 'Dark indie rock with anime edge — electric guitar wall, Phrygian tension, cold stop',
     bpm: '158', theme: 'dark indie rock anime opening theme, electric guitar driven', lead: 'overdriven electric guitar lead', mood: 'dark tense',
@@ -221,3 +269,13 @@ export const PRESETS = [
     ],
   },
 ];
+
+export const DEFAULT_POOLS = {
+  themeOpts: THEME_OPTS,
+  leadOpts:  LEAD_OPTS,
+  moodOpts:  MOOD_OPTS,
+  instPool:  INST_POOL,
+  feels:     FEELS,
+  feelWords: FEEL_WORDS,
+  exclude:   EXCLUDE,
+};

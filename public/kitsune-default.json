@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "settings": {
+    "theme": "hybrid lofi-electronic anime opening theme",
+    "lead": "solo cello lead",
+    "mood": "emotional cinematic"
+  },
+  "pools": {
+    "themeOpts": [
+      { "v": "hybrid lofi-electronic anime opening theme",           "label": "Anime OP" },
+      { "v": "soft acoustic indie pop anime ending theme",           "label": "Anime ED" },
+      { "v": "cinematic orchestral anime soundtrack, dramatic score", "label": "OST" },
+      { "v": "Japanese city pop retro electronic, 1980s anime",      "label": "City Pop" },
+      { "v": "electronic J-pop anime theme, bright synth pop drive", "label": "J-Pop Electronic" },
+      { "v": "dark indie rock anime opening theme, electric guitar driven", "label": "Indie Rock OP" }
+    ],
+    "leadOpts": [
+      { "v": "grand piano lead",               "label": "Piano" },
+      { "v": "solo cello lead",                "label": "Solo Cello" },
+      { "v": "detuned sawtooth synth lead",    "label": "Saw Synth" },
+      { "v": "warm nylon string guitar lead",  "label": "Nylon Guitar" },
+      { "v": "clean bright synth lead",        "label": "Bright Synth" },
+      { "v": "overdriven electric guitar lead", "label": "Electric Guitar" },
+      { "v": "sparse solo piano lead",         "label": "Sparse Piano" },
+      { "v": "sul ponticello string lead",     "label": "Sul Ponticello" }
+    ],
+    "moodOpts": [
+      { "v": "serene nostalgic",    "label": "Serene" },
+      { "v": "emotional cinematic", "label": "Cinematic" },
+      { "v": "dark tense",          "label": "Dark" },
+      { "v": "euphoric triumphant", "label": "Euphoric" }
+    ],
+    "instPool": {
+      "lead":    ["nylon string melody", "bright pizzicato strings", "soaring violin line", "piano accent line", "synth lead layer", "flute ornament", "viola phrase", "overdriven electric guitar lead", "clean electric guitar riff", "sparse solo piano", "sul ponticello violin", "recorder melody"],
+      "harmony": ["string arpeggios", "slow string pads", "warm synth pads", "pizzicato strings", "tremolo strings", "lush orchestral strings", "ambient breath pads", "organ wash", "operatic synth choir", "open fifth string cluster", "harp arpeggios"],
+      "rhythm":  ["lazy shuffled drums", "four-on-floor kick", "snapped claps", "soft claps", "punched snare", "syncopated hi-hats", "brushed snare", "half-time feel", "driving rock drums", "mechanical clock pulse", "orchestral percussion hits"],
+      "bass":    ["dubstep bass pulse", "warm sub bass", "walking bass", "pizzicato bass", "soft dubstep sub", "deep low rumble", "upright bass feel", "distorted bass guitar", "contrabass pedal drone"],
+      "texture": ["vinyl crackle", "tape hiss", "dusty vintage drums", "reverse swells", "golden shimmer", "warm room reverb", "subtle noise floor", "guitar amp distortion", "digital glitch artifacts", "cathedral reverb wash"],
+      "energy":  ["orchestral swell", "dramatic build", "gentle energy lift", "explosive release", "tension riser", "warm golden fade", "soft morning light feel", "airy lift", "haunting suspension"]
+    },
+    "feels": ["gentle", "warm", "intense", "dark", "euphoric"],
+    "feelWords": {
+      "gentle": "soft",
+      "warm":   "warm",
+      "intense": "driving",
+      "dark":   "tense",
+      "euphoric": "soaring"
+    },
+    "exclude": "thin bell lead, celesta, glockenspiel, music box, soft lullaby piano, koto, shamisen, folk instruments, choir vocals, singing, trap, 8-bit, chiptune, acoustic guitar, new age, slow ballad, sleepy, ambient only, harsh distortion, heavy metal"
+  }
+}

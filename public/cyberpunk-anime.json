@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "settings": {
+    "theme": "cyberpunk anime OST, dark electronic, futuristic noir",
+    "lead": "cold digital piano lead",
+    "mood": "desolate neon melancholy"
+  },
+  "pools": {
+    "themeOpts": [
+      { "v": "cyberpunk anime OST, dark electronic, futuristic noir",             "label": "Cyber Noir" },
+      { "v": "synthwave retro-futuristic anime, neon city pulse",                 "label": "Synthwave" },
+      { "v": "ghost-in-the-shell ambient electronic, philosophical melancholy",   "label": "Ghost OST" },
+      { "v": "dark industrial anime score, post-apocalyptic electronic",          "label": "Industrial" },
+      { "v": "lo-fi cyber hip hop anime beat, late-night city",                   "label": "Cyber Lo-fi" }
+    ],
+    "leadOpts": [
+      { "v": "cold digital piano lead",                  "label": "Digital Piano" },
+      { "v": "detuned sawtooth synth lead",              "label": "Saw Synth" },
+      { "v": "distorted electric guitar lead, neon-lit", "label": "Neon Guitar" },
+      { "v": "glitched modular synth lead",              "label": "Modular" },
+      { "v": "vocoder melody lead",                      "label": "Vocoder" },
+      { "v": "clean electric guitar lead, night city",   "label": "Night Guitar" }
+    ],
+    "moodOpts": [
+      { "v": "desolate neon melancholy",  "label": "Neon Desolate" },
+      { "v": "cold mechanical tension",   "label": "Mechanical" },
+      { "v": "rising cyber defiance",     "label": "Defiant" },
+      { "v": "midnight city ambience",    "label": "Midnight City" }
+    ],
+    "instPool": {
+      "lead":    ["sawtooth synth melody", "square wave lead", "overdriven electric guitar lead", "clean electric guitar riff", "vocoder phrase", "digital piano accent", "glitched synth stutter", "arpeggio synth line"],
+      "harmony": ["warm analog pad", "cold digital strings", "detuned synth choir", "layered synth chords", "hollow fifth pad", "electric piano chords", "ambient drone wash", "neon pulse arpeggio"],
+      "rhythm":  ["four-on-floor kick", "punched snare", "mechanical hi-hats", "glitched drum break", "half-time feel", "industrial percussion hits", "lo-fi drum loop", "programmed trap hi-hats"],
+      "bass":    ["deep sub bass pulse", "distorted synth bass", "walking electric bass", "reese bass growl", "portamento synth bass", "dubstep bass pulse", "analog bass stab"],
+      "texture": ["digital glitch artifacts", "data stream noise", "neon city reverb", "tape saturation", "vinyl scratch", "radio static", "holographic shimmer", "urban ambience layer"],
+      "energy":  ["rising synth swell", "mechanical tension build", "cyber defiance lift", "cold static release", "neon fade", "glitch burst", "night drive momentum"]
+    },
+    "feels": ["desolate", "neon", "mechanical", "glitched", "rising"],
+    "feelWords": {
+      "desolate":  "hollow",
+      "neon":      "electric",
+      "mechanical": "rigid",
+      "glitched":  "fractured",
+      "rising":    "ascending"
+    },
+    "exclude": "acoustic guitar, folk instruments, koto, shamisen, choir vocals, singing, music box, celesta, glockenspiel, bell lead, orchestral strings, acoustic piano, new age, pastoral, lullaby, nature sounds, anime pop, kawaii, cute, country, jazz piano"
+  },
+  "presets": [
+    {
+      "id": "cyber-ghost-protocol",
+      "name": "Ghost Protocol",
+      "artist": "Ghost in the Shell",
+      "desc": "Philosophical melancholy — cold digital piano over drone pads, Dorian shimmer, ambient dissolve",
+      "bpm": "88",
+      "theme": "ghost-in-the-shell ambient electronic, philosophical melancholy",
+      "lead": "cold digital piano lead",
+      "mood": "desolate neon melancholy",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "pedal-void",  "feel": "desolate",  "endingType": null,        "inst": { "lead": [],                    "harmony": ["ambient drone wash", "hollow fifth pad"],    "rhythm": [],                            "bass": ["deep sub bass pulse"],   "texture": ["neon city reverb", "data stream noise"], "energy": [] } },
+        { "typeId": "verse",   "prog": "dorian",      "feel": "desolate",  "endingType": null,        "inst": { "lead": ["digital piano accent"], "harmony": ["cold digital strings", "hollow fifth pad"], "rhythm": ["lo-fi drum loop"],            "bass": ["deep sub bass pulse"],   "texture": ["data stream noise"],                     "energy": [] } },
+        { "typeId": "develop", "prog": "line-cliche", "feel": "neon",      "endingType": null,        "inst": { "lead": ["digital piano accent"], "harmony": ["warm analog pad", "electric piano chords"], "rhythm": ["half-time feel"],             "bass": ["portamento synth bass"], "texture": [],                                        "energy": ["rising synth swell"] } },
+        { "typeId": "outro",   "prog": "pedal-void",  "feel": "desolate",  "endingType": "dissolve",  "inst": { "lead": [],                    "harmony": ["ambient drone wash"],                       "rhythm": [],                            "bass": ["deep sub bass pulse"],   "texture": ["neon city reverb", "radio static"],      "energy": ["neon fade"] } }
+      ]
+    },
+    {
+      "id": "cyber-neo-tokyo",
+      "name": "Neo Tokyo",
+      "artist": "Akira",
+      "desc": "Post-apocalyptic chaos — chromatic descent, industrial percussion, overdriven riffs, cold cut",
+      "bpm": "160",
+      "theme": "dark industrial anime score, post-apocalyptic electronic",
+      "lead": "detuned sawtooth synth lead",
+      "mood": "cold mechanical tension",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "phrygian",       "feel": "mechanical", "endingType": null,   "inst": { "lead": [],                                              "harmony": ["cold digital strings"],                             "rhythm": ["mechanical hi-hats", "half-time feel"],                  "bass": ["distorted synth bass"],  "texture": ["digital glitch artifacts"],                 "energy": [] } },
+        { "typeId": "develop", "prog": "chromatic-sink", "feel": "mechanical", "endingType": null,   "inst": { "lead": ["sawtooth synth melody"],                        "harmony": ["cold digital strings", "detuned synth choir"],       "rhythm": ["mechanical hi-hats", "punched snare"],                   "bass": ["distorted synth bass"],  "texture": ["digital glitch artifacts"],                 "energy": ["mechanical tension build"] } },
+        { "typeId": "chorus",  "prog": "anime-prog",     "feel": "glitched",   "endingType": null,   "inst": { "lead": ["overdriven electric guitar lead", "sawtooth synth melody"], "harmony": ["layered synth chords", "detuned synth choir"], "rhythm": ["four-on-floor kick", "industrial percussion hits"], "bass": ["reese bass growl"],       "texture": [],                                           "energy": ["cyber defiance lift", "glitch burst"] } },
+        { "typeId": "outro",   "prog": "chromatic-sink", "feel": "mechanical", "endingType": "cold", "inst": { "lead": [],                                              "harmony": ["cold digital strings"],                             "rhythm": ["mechanical hi-hats"],                                    "bass": ["distorted synth bass"],  "texture": ["digital glitch artifacts"],                 "energy": [] } }
+      ]
+    },
+    {
+      "id": "cyber-midnight-drive",
+      "name": "Midnight Drive",
+      "artist": "Synthwave",
+      "desc": "Retro-futuristic neon cruise — analog pads, sawtooth lead, driving pulse, euphoric lift",
+      "bpm": "118",
+      "theme": "synthwave retro-futuristic anime, neon city pulse",
+      "lead": "detuned sawtooth synth lead",
+      "mood": "midnight city ambience",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "pedal-void",    "feel": "neon",    "endingType": null,   "inst": { "lead": ["arpeggio synth line"],                       "harmony": ["warm analog pad", "neon pulse arpeggio"],            "rhythm": ["four-on-floor kick"],                    "bass": ["deep sub bass pulse"],   "texture": ["holographic shimmer"],              "energy": [] } },
+        { "typeId": "theme",   "prog": "axis",          "feel": "neon",    "endingType": null,   "inst": { "lead": ["sawtooth synth melody"],                     "harmony": ["warm analog pad", "layered synth chords"],           "rhythm": ["four-on-floor kick", "mechanical hi-hats"], "bass": ["portamento synth bass"], "texture": [],                                   "energy": ["night drive momentum"] } },
+        { "typeId": "chorus",  "prog": "yonezu",        "feel": "rising",  "endingType": null,   "inst": { "lead": ["sawtooth synth melody", "arpeggio synth line"], "harmony": ["layered synth chords", "neon pulse arpeggio"],   "rhythm": ["four-on-floor kick", "punched snare"],   "bass": ["deep sub bass pulse"],   "texture": ["holographic shimmer"],              "energy": ["cyber defiance lift", "rising synth swell"] } },
+        { "typeId": "outro",   "prog": "pedal-void",    "feel": "neon",    "endingType": "fade", "inst": { "lead": ["arpeggio synth line"],                       "harmony": ["warm analog pad"],                                  "rhythm": ["four-on-floor kick"],                    "bass": ["deep sub bass pulse"],   "texture": ["holographic shimmer", "urban ambience layer"], "energy": ["neon fade"] } }
+      ]
+    },
+    {
+      "id": "cyber-serial-fragments",
+      "name": "Serial Fragments",
+      "artist": "Serial Experiments Lain",
+      "desc": "Paranoid disintegration — glitched stutter, Phrygian drone, radio static, abrupt cold stop",
+      "bpm": "64",
+      "theme": "ghost-in-the-shell ambient electronic, philosophical melancholy",
+      "lead": "glitched modular synth lead",
+      "mood": "desolate neon melancholy",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "phrygian",    "feel": "desolate", "endingType": null,   "inst": { "lead": [],                      "harmony": ["ambient drone wash"],                              "rhythm": [],                      "bass": ["deep sub bass pulse"], "texture": ["radio static", "digital glitch artifacts"], "energy": [] } },
+        { "typeId": "verse",   "prog": "pedal-void",  "feel": "glitched", "endingType": null,   "inst": { "lead": ["glitched synth stutter"], "harmony": ["ambient drone wash", "cold digital strings"],    "rhythm": ["lo-fi drum loop"],     "bass": ["deep sub bass pulse"], "texture": ["data stream noise"],                        "energy": [] } },
+        { "typeId": "bridge",  "prog": "modulation",  "feel": "glitched", "endingType": null,   "inst": { "lead": ["glitched synth stutter"], "harmony": ["detuned synth choir"],                          "rhythm": ["glitched drum break"], "bass": [],                      "texture": ["digital glitch artifacts", "radio static"], "energy": ["mechanical tension build"] } },
+        { "typeId": "outro",   "prog": "pedal-void",  "feel": "desolate", "endingType": "cold", "inst": { "lead": [],                      "harmony": ["ambient drone wash"],                              "rhythm": [],                      "bass": [],                      "texture": ["radio static", "data stream noise"],        "energy": [] } }
+      ]
+    },
+    {
+      "id": "cyber-defiance-protocol",
+      "name": "Defiance Protocol",
+      "artist": "Promare / Gurren Lagann",
+      "desc": "Triumphant cyber rebellion — rising synth arc, Neapolitan arrival, guitar wall, sustained resolution",
+      "bpm": "148",
+      "theme": "cyberpunk anime OST, dark electronic, futuristic noir",
+      "lead": "detuned sawtooth synth lead",
+      "mood": "rising cyber defiance",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",    "prog": "flat-six",    "feel": "rising",    "endingType": null,       "inst": { "lead": ["arpeggio synth line"],                              "harmony": ["layered synth chords"],                             "rhythm": ["mechanical hi-hats", "four-on-floor kick"], "bass": ["deep sub bass pulse"], "texture": ["holographic shimmer"],              "energy": ["rising synth swell"] } },
+        { "typeId": "develop",  "prog": "secondary-dom","feel": "mechanical","endingType": null,       "inst": { "lead": ["sawtooth synth melody", "arpeggio synth line"],    "harmony": ["cold digital strings", "layered synth chords"],     "rhythm": ["four-on-floor kick", "punched snare"],      "bass": ["distorted synth bass"], "texture": [],                                   "energy": ["mechanical tension build"] } },
+        { "typeId": "chorus",   "prog": "neapolitan",  "feel": "rising",    "endingType": null,       "inst": { "lead": ["overdriven electric guitar lead", "sawtooth synth melody"], "harmony": ["layered synth chords", "detuned synth choir"], "rhythm": ["four-on-floor kick", "industrial percussion hits", "punched snare"], "bass": ["reese bass growl"], "texture": [], "energy": ["cyber defiance lift", "glitch burst"] } },
+        { "typeId": "bridge",   "prog": "modulation",  "feel": "mechanical","endingType": null,       "inst": { "lead": ["arpeggio synth line"],                              "harmony": ["cold digital strings"],                             "rhythm": ["half-time feel"],                           "bass": ["distorted synth bass"], "texture": ["digital glitch artifacts"],         "energy": ["mechanical tension build"] } },
+        { "typeId": "outro",    "prog": "flat-six",    "feel": "rising",    "endingType": "sustain",  "inst": { "lead": ["sawtooth synth melody"],                            "harmony": ["layered synth chords", "warm analog pad"],          "rhythm": ["four-on-floor kick"],                       "bass": ["deep sub bass pulse"], "texture": ["holographic shimmer"],              "energy": ["cyber defiance lift", "rising synth swell"] } }
+      ]
+    }
+  ]
+}

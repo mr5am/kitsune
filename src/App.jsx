@@ -1,11 +1,18 @@
 import { useState, useRef, useEffect } from 'react';
-import { TYPES, CATS, PROGS, FEELS, INST_POOL, THEME_OPTS, LEAD_OPTS, MOOD_OPTS, PRESETS } from './data';
+import { TYPES, CATS, PROGS, PRESETS, DEFAULT_POOLS } from './data';
 import GlobalSettings from './components/GlobalSettings';
 import SectionCard from './components/SectionCard';
 import AddSectionModal from './components/AddSectionModal';
 import PresetModal from './components/PresetModal';
+import SettingsFileModal from './components/SettingsFileModal';
 import OutputBar from './components/OutputBar';
 import styles from './App.module.css';
+
+const rand = arr => arr[Math.floor(Math.random() * arr.length)];
+const randSubset = (pool, min, max) => {
+  const n = Math.floor(Math.random() * (max - min + 1)) + min;
+  return [...pool].sort(() => Math.random() - 0.5).slice(0, n);
+};
 
 function makeSection(typeId, uid) {
   const t = TYPES.find(x => x.id === typeId);
@@ -17,13 +24,14 @@ function makeSection(typeId, uid) {
 export default function App() {
   const uidRef = useRef(1);
   const toastTimer = useRef(null);
+  const isLoadingFromHash = useRef(false);
 
   const [G, setG] = useState(() => {
     try {
       const saved = localStorage.getItem('kitsune_G');
       if (saved) return JSON.parse(saved);
     } catch {}
-    return { bpm: '145', theme: THEME_OPTS[0].v, lead: 'solo cello lead', mood: 'emotional cinematic' };
+    return { bpm: '145', theme: DEFAULT_POOLS.themeOpts[0].v, lead: 'solo cello lead', mood: 'emotional cinematic' };
   });
 
   const [sections, setSections] = useState(() => {
@@ -46,6 +54,7 @@ export default function App() {
 
   const [modalOpen, setModalOpen] = useState(false);
   const [presetModalOpen, setPresetModalOpen] = useState(false);
+  const [settingsFileModalOpen, setSettingsFileModalOpen] = useState(false);
   const [toast, setToast] = useState({ msg: '', visible: false });
   const [activePreset, setActivePreset] = useState(null);
   const [userPresets, setUserPresets] = useState(() =>
@@ -54,6 +63,13 @@ export default function App() {
   const [removedDefaults, setRemovedDefaults] = useState(() =>
     JSON.parse(localStorage.getItem('kitsune_removed_defaults') || '[]')
   );
+  const [pools, setPools] = useState(() => {
+    try {
+      const saved = localStorage.getItem('kitsune_pools');
+      if (saved) return { ...DEFAULT_POOLS, ...JSON.parse(saved) };
+    } catch {}
+    return DEFAULT_POOLS;
+  });
 
   useEffect(() => {
     localStorage.setItem('kitsune_G', JSON.stringify(G));
@@ -70,6 +86,56 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem('kitsune_removed_defaults', JSON.stringify(removedDefaults));
   }, [removedDefaults]);
+
+  useEffect(() => {
+    localStorage.setItem('kitsune_pools', JSON.stringify(pools));
+  }, [pools]);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    isLoadingFromHash.current = true;
+    try {
+      const raw = decodeURIComponent(escape(atob(hash.slice(1))));
+      const payload = JSON.parse(raw);
+      if (payload.v !== 1) throw new Error('unknown version');
+      const validTypeIds = TYPES.map(t => t.id);
+      const newSections = payload.sections
+        .filter(s => validTypeIds.includes(s.typeId))
+        .map((s, i) => {
+          const base = makeSection(s.typeId, uidRef.current++);
+          const inst = { ...base.inst };
+          Object.keys(s.inst || {}).forEach(cat => {
+            if (inst[cat] !== undefined) inst[cat] = [...(s.inst[cat] || [])];
+          });
+          const endingType = s.endingType !== undefined ? s.endingType : base.endingType;
+          return { ...base, prog: s.prog, feel: s.feel, inst, endingType, open: i === 0 };
+        });
+      setG(payload.G);
+      setSections(newSections);
+    } catch {
+      showToast('Link is invalid or too old — starting fresh');
+      history.replaceState(null, '', window.location.pathname);
+    }
+    isLoadingFromHash.current = false;
+  }, []);
+
+  useEffect(() => {
+    if (isLoadingFromHash.current) return;
+    const timer = setTimeout(() => {
+      const payload = {
+        v: 1,
+        G,
+        sections: sections.map(s => ({
+          typeId: s.typeId, prog: s.prog, feel: s.feel,
+          endingType: s.endingType, inst: s.inst,
+        })),
+      };
+      const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+      history.replaceState(null, '', '#' + encoded);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [G, sections]);
 
   const allPresets = [
     ...PRESETS.filter(p => !removedDefaults.includes(p.id)),
@@ -91,6 +157,17 @@ export default function App() {
   };
 
   const removeSection = id => setSections(prev => prev.filter(s => s.id !== id));
+
+  const duplicateSection = id => {
+    setSections(prev => {
+      const i = prev.findIndex(s => s.id === id);
+      if (i === -1) return prev;
+      const copy = { ...prev[i], id: uidRef.current++, open: false };
+      const arr = [...prev];
+      arr.splice(i + 1, 0, copy);
+      return arr;
+    });
+  };
 
   const moveSection = (id, dir) => {
     setSections(prev => {
@@ -123,31 +200,46 @@ export default function App() {
   const setFeel = (id, feel) => setSections(prev => prev.map(s => s.id === id ? { ...s, feel } : s));
   const setEndingType = (id, endingType) => setSections(prev => prev.map(s => s.id === id ? { ...s, endingType } : s));
 
-  const surpriseMe = () => {
-    const rand = arr => arr[Math.floor(Math.random() * arr.length)];
-    const randSubset = (pool, min, max) => {
-      const n = Math.floor(Math.random() * (max - min + 1)) + min;
-      return [...pool].sort(() => Math.random() - 0.5).slice(0, n);
-    };
+  const randomizeSection = id => {
+    const ip = pools.instPool;
+    setSections(prev => prev.map(s => {
+      if (s.id !== id) return s;
+      return {
+        ...s,
+        prog: rand(PROGS).id,
+        feel: rand(pools.feels),
+        inst: {
+          lead:    randSubset(ip.lead    || [], 0, 1),
+          harmony: randSubset(ip.harmony || [], 1, 2),
+          rhythm:  randSubset(ip.rhythm  || [], 0, 2),
+          bass:    randSubset(ip.bass    || [], 0, 1),
+          texture: randSubset(ip.texture || [], 0, 2),
+          energy:  randSubset(ip.energy  || [], 0, 1),
+        },
+      };
+    }));
+  };
 
+  const surpriseMe = () => {
+    const ip = pools.instPool;
     setG({
       bpm: String(Math.floor(Math.random() * (200 - 40 + 1)) + 40),
-      theme: rand(THEME_OPTS).v,
-      lead: rand(LEAD_OPTS).v,
-      mood: rand(MOOD_OPTS).v,
+      theme: rand(pools.themeOpts).v,
+      lead: rand(pools.leadOpts).v,
+      mood: rand(pools.moodOpts).v,
     });
 
     setSections(prev => prev.map(s => ({
       ...s,
       prog: rand(PROGS).id,
-      feel: rand(FEELS),
+      feel: rand(pools.feels),
       inst: {
-        lead:    randSubset(INST_POOL.lead,    0, 1),
-        harmony: randSubset(INST_POOL.harmony, 1, 2),
-        rhythm:  randSubset(INST_POOL.rhythm,  0, 2),
-        bass:    randSubset(INST_POOL.bass,    0, 1),
-        texture: randSubset(INST_POOL.texture, 0, 2),
-        energy:  randSubset(INST_POOL.energy,  0, 1),
+        lead:    randSubset(ip.lead    || [], 0, 1),
+        harmony: randSubset(ip.harmony || [], 1, 2),
+        rhythm:  randSubset(ip.rhythm  || [], 0, 2),
+        bass:    randSubset(ip.bass    || [], 0, 1),
+        texture: randSubset(ip.texture || [], 0, 2),
+        energy:  randSubset(ip.energy  || [], 0, 1),
       },
     })));
 
@@ -206,6 +298,52 @@ export default function App() {
     if (activePreset === presetId) setActivePreset(null);
   };
 
+  const exportSettingsFile = () => {
+    const payload = { version: 1, settings: { theme: G.theme, lead: G.lead, mood: G.mood }, pools, presets: allPresets };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'kitsune-settings.json'; a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const importSettingsFile = parsed => {
+    let newPools = pools;
+    if (parsed.pools) {
+      newPools = { ...DEFAULT_POOLS, ...parsed.pools };
+      setPools(newPools);
+    }
+    if (parsed.settings || parsed.pools) {
+      setG(prev => {
+        const next = { ...prev };
+        if (parsed.settings?.theme) next.theme = parsed.settings.theme;
+        if (parsed.settings?.lead)  next.lead  = parsed.settings.lead;
+        if (parsed.settings?.mood)  next.mood  = parsed.settings.mood;
+        if (!newPools.themeOpts.find(o => o.v === next.theme)) next.theme = newPools.themeOpts[0]?.v ?? next.theme;
+        if (!newPools.leadOpts.find(o => o.v === next.lead))   next.lead  = newPools.leadOpts[0]?.v  ?? next.lead;
+        if (!newPools.moodOpts.find(o => o.v === next.mood))   next.mood  = newPools.moodOpts[0]?.v  ?? next.mood;
+        return next;
+      });
+    }
+    if (Array.isArray(parsed.presets)) {
+      setRemovedDefaults(PRESETS.map(p => p.id));
+      setUserPresets(parsed.presets.map(p => ({ ...p, isUserPreset: true })));
+    }
+    showToast('Settings imported');
+    setSettingsFileModalOpen(false);
+  };
+
+  const resetToOriginal = () => {
+    setPools(DEFAULT_POOLS);
+    setG(prev => ({
+      ...prev,
+      theme: DEFAULT_POOLS.themeOpts.find(o => o.v === prev.theme) ? prev.theme : DEFAULT_POOLS.themeOpts[0].v,
+      lead:  DEFAULT_POOLS.leadOpts.find(o => o.v === prev.lead)   ? prev.lead  : DEFAULT_POOLS.leadOpts[0].v,
+      mood:  DEFAULT_POOLS.moodOpts.find(o => o.v === prev.mood)   ? prev.mood  : DEFAULT_POOLS.moodOpts[0].v,
+    }));
+    showToast('Reset to original Kitsune');
+  };
+
   const copyText = text => {
     if (!text || text.startsWith('—')) { showToast('Nothing to copy yet'); return; }
     const fallback = () => {
@@ -254,13 +392,19 @@ export default function App() {
         >
           ✦ {activePresetObj ? activePresetObj.name : 'Presets'}
         </button>
+        <button
+          className={styles.settingsFileBtn}
+          onClick={() => setSettingsFileModalOpen(true)}
+        >
+          ⇅ Settings File
+        </button>
       </div>
 
       <div className={styles.secHead}>
         <h2>GLOBAL SETTINGS</h2>
         <div className={styles.secLine} />
       </div>
-      <GlobalSettings G={G} onChange={setG} />
+      <GlobalSettings G={G} onChange={setG} themeOpts={pools.themeOpts} leadOpts={pools.leadOpts} moodOpts={pools.moodOpts} />
 
       <div className={styles.secHead}>
         <h2>SONG STRUCTURE</h2>
@@ -280,6 +424,10 @@ export default function App() {
             onToggleInst={toggleInst}
             onSetFeel={setFeel}
             onSetEndingType={setEndingType}
+            onRandomize={randomizeSection}
+            onDuplicate={duplicateSection}
+            feels={pools.feels}
+            instPool={pools.instPool}
           />
         ))}
       </div>
@@ -289,7 +437,7 @@ export default function App() {
         <div className={styles.addLbl}>Add Section</div>
       </div>
 
-      <OutputBar G={G} sections={sections} onCopy={copyText} />
+      <OutputBar G={G} sections={sections} onCopy={copyText} exclude={pools.exclude} feelWords={pools.feelWords} />
 
       <AddSectionModal
         open={modalOpen}
@@ -306,6 +454,17 @@ export default function App() {
         onLoad={loadPreset}
         onSave={savePreset}
         onRemove={removePreset}
+      />
+
+      <SettingsFileModal
+        open={settingsFileModalOpen}
+        onClose={() => setSettingsFileModalOpen(false)}
+        G={G}
+        pools={pools}
+        userPresets={allPresets}
+        onExport={exportSettingsFile}
+        onImport={importSettingsFile}
+        onReset={resetToOriginal}
       />
 
       <div className={`${styles.toast}${toast.visible ? ' ' + styles.toastShow : ''}`}>

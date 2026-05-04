@@ -1,64 +1,42 @@
-import { useState } from 'react';
-import { PROGS, EXCLUDE, TYPES, FEEL_WORDS, ENDING_TYPES } from '../data';
+import { useState, useEffect } from 'react';
+import { buildOutputs, buildSongName } from '../lib/buildOutputs';
 import styles from './OutputBar.module.css';
 
-function buildOutputs(G, sections) {
-  if (!sections.length) {
-    return { style: '— add sections above —', exclude: EXCLUDE, lyrics: '— add sections above —' };
-  }
-
-  const progTokens = [...new Set(
-    sections.map(s => PROGS.find(p => p.id === s.prog)?.sunoStyle).filter(Boolean)
-  )];
-  const allInst = [...new Set(sections.flatMap(s => Object.values(s.inst).flat()))];
-  const endingTokens = [...new Set(
-    sections.map(s => ENDING_TYPES.find(e => e.id === s.endingType)?.suno).filter(Boolean)
-  )];
-
-  const style = [
-    G.theme,
-    `${G.bpm} BPM`,
-    G.mood,
-    G.lead,
-    ...progTokens,
-    ...allInst,
-    ...endingTokens,
-    'wide cinematic mix',
-    'instrumental only',
-  ].join(', ');
-
-  const lyricLines = ['[Instrumental]', ''];
-  sections.forEach(s => {
-    const T = TYPES.find(t => t.id === s.typeId);
-    const P = PROGS.find(p => p.id === s.prog);
-    const instParts = ['lead', 'harmony', 'rhythm', 'bass', 'texture', 'energy']
-      .flatMap(cat => s.inst[cat] || []);
-    const progHint = P ? P.lyricTag : '';
-    const feelWord = FEEL_WORDS[s.feel] || s.feel;
-    const E = ENDING_TYPES.find(e => e.id === s.endingType);
-    const desc = [progHint, ...instParts, E ? E.suno : null].filter(Boolean).join(', ') || 'ambient space';
-    lyricLines.push(`[${T.label}]`);
-    lyricLines.push(`[${feelWord} ${desc}]`);
-    lyricLines.push('');
-  });
-
-  return { style, exclude: EXCLUDE, lyrics: lyricLines.join('\n').trim() };
-}
-
 const TABS = [
-  { key: 'style',   label: 'Style' },
-  { key: 'exclude', label: 'Exclude Style' },
-  { key: 'lyrics',  label: 'Lyrics' },
+  { key: 'style',   label: 'Style',        fieldLabel: 'Style',          copyLabel: 'Copy Style',    primary: true,  textCls: '' },
+  { key: 'exclude', label: 'Exclude Style', fieldLabel: 'Exclude',        copyLabel: 'Copy Exclude',  primary: false, textCls: 'tExclude' },
+  { key: 'lyrics',  label: 'Lyrics',        fieldLabel: 'Lyrics',         copyLabel: 'Copy Lyrics',   primary: false, textCls: 'tLyrics' },
 ];
 
-export default function OutputBar({ G, sections, onCopy }) {
+export default function OutputBar({ G, sections, onCopy, exclude, feelWords }) {
   const [activeTab, setActiveTab] = useState('style');
-  const { style, exclude, lyrics } = buildOutputs(G, sections);
-  const panels = { style, exclude, lyrics };
+  const [nameIndex, setNameIndex] = useState(0);
+
+  useEffect(() => { setNameIndex(0); }, [G, sections]);
+
+  const { style, exclude: excl, lyrics } = buildOutputs(G, sections, exclude, feelWords);
+  const panels = { style, exclude: excl, lyrics };
+  const songName = buildSongName(G, sections, nameIndex);
+
+  const handleCopyAll = () => {
+    if (!sections.length) { onCopy('— Nothing to copy yet'); return; }
+    onCopy(`Style:\n${style}\n\nExclude:\n${excl}\n\nLyrics:\n${lyrics}`);
+  };
 
   return (
     <div className={styles.outputSticky}>
       <div className={styles.outInner}>
+        <div className={styles.nameRow}>
+          {songName
+            ? <>
+                <span className={styles.nameLbl}>Name</span>
+                <span className={styles.nameVal}>{songName}</span>
+                <button className={styles.nameBtn} onClick={() => setNameIndex(i => (i + 1) % 3)} title="Regenerate name">↺</button>
+                <button className={styles.nameBtn} onClick={() => onCopy(songName)} title="Copy name">⎘</button>
+              </>
+            : <span className={styles.namePlaceholder}>— name your song above —</span>
+          }
+        </div>
         <div className={styles.outTabs}>
           {TABS.map(t => (
             <button
@@ -75,13 +53,10 @@ export default function OutputBar({ G, sections, onCopy }) {
               key={t.key}
               className={`${styles.outPanel}${activeTab === t.key ? ' ' + styles.visiblePanel : ''}`}
             >
-              <div className={styles.outFieldLbl}>
-                {t.key === 'exclude' ? 'Exclude' : t.key.charAt(0).toUpperCase() + t.key.slice(1)}
-              </div>
+              <div className={styles.outFieldLbl}>{t.fieldLabel}</div>
               <div className={[
                 styles.outText,
-                t.key === 'exclude' ? styles.tExclude : '',
-                t.key === 'lyrics'  ? styles.tLyrics  : '',
+                t.textCls ? styles[t.textCls] : '',
               ].join(' ')}>
                 {panels[t.key]}
               </div>
@@ -90,9 +65,14 @@ export default function OutputBar({ G, sections, onCopy }) {
         </div>
 
         <div className={styles.outActions}>
-          <button className={`${styles.btn} ${styles.btnG}`} onClick={() => onCopy(exclude)}>Copy Exclude</button>
-          <button className={`${styles.btn} ${styles.btnG}`} onClick={() => onCopy(lyrics)}>Copy Lyrics</button>
-          <button className={`${styles.btn} ${styles.btnP}`} onClick={() => onCopy(style)}>Copy Style</button>
+          <button className={`${styles.btn} ${styles.btnCopyAll}`} onClick={handleCopyAll}>Copy All</button>
+          {TABS.map(t => (
+            <button
+              key={t.key}
+              className={`${styles.btn} ${t.primary ? styles.btnP : styles.btnG}`}
+              onClick={() => onCopy(panels[t.key])}
+            >{t.copyLabel}</button>
+          ))}
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { TYPES, PROGS, FEELS, ENDING_TYPES } from '../data';
+import { TYPES, PROGS, ENDING_TYPES } from '../data';
 import ProgPicker from './ProgPicker';
 import InstLayers from './InstLayers';
 import styles from './SectionCard.module.css';
@@ -12,7 +12,7 @@ function barClass(typeId) {
   return map[typeId] || '';
 }
 
-export default function SectionCard({ section: s, index, total, onToggleOpen, onRemove, onMove, onSetProg, onToggleInst, onSetFeel, onSetEndingType }) {
+export default function SectionCard({ section: s, index, total, onToggleOpen, onRemove, onMove, onSetProg, onToggleInst, onSetFeel, onSetEndingType, onRandomize, onDuplicate, feels, instPool }) {
   const T = TYPES.find(t => t.id === s.typeId);
   const P = PROGS.find(p => p.id === s.prog);
   const allInst = Object.values(s.inst).flat();
@@ -38,6 +38,8 @@ export default function SectionCard({ section: s, index, total, onToggleOpen, on
           {index < total - 1 && (
             <button className={styles.iconBtn} onClick={() => onMove(s.id, 1)} title="Move down">↓</button>
           )}
+          <button className={`${styles.iconBtn} ${styles.dice}`} onClick={() => onRandomize(s.id)} title="Randomise section">⚄</button>
+          <button className={`${styles.iconBtn} ${styles.dup}`} onClick={() => onDuplicate(s.id)} title="Duplicate">⎘</button>
           <button className={`${styles.iconBtn} ${styles.del}`} onClick={() => onRemove(s.id)} title="Remove">✕</button>
           <span className={styles.ssChevron}>▾</span>
         </div>
@@ -52,11 +54,11 @@ export default function SectionCard({ section: s, index, total, onToggleOpen, on
             </div>
             <div>
               <div className={styles.colLabel}>Instrument Layers</div>
-              <InstLayers inst={s.inst} onToggle={(cat, item) => onToggleInst(s.id, cat, item)} />
+              <InstLayers inst={s.inst} onToggle={(cat, item) => onToggleInst(s.id, cat, item)} instPool={instPool} />
               <div className={styles.feelRow}>
                 <div className={styles.feelLabel}>Section Feel</div>
                 <div className={styles.feelOpts}>
-                  {FEELS.map(f => (
+                  {feels.map(f => (
                     <div
                       key={f}
                       className={`${styles.feelOpt}${s.feel === f ? ' ' + styles.feelOptOn : ''}`}

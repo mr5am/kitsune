@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "settings": {
+    "theme": "cinematic orchestral anime soundtrack, dramatic score",
+    "lead": "sparse solo piano lead",
+    "mood": "dark tense"
+  },
+  "presets": [
+    {
+      "id": "nier-city-ruins",
+      "name": "City Ruins",
+      "artist": "Nier Automata",
+      "desc": "Sparse piano over ruins — Dorian melancholy, open strings, operatic choir swell",
+      "bpm": "96",
+      "theme": "cinematic orchestral anime soundtrack, dramatic score",
+      "lead": "sparse solo piano lead",
+      "mood": "dark tense",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "pedal-void",  "feel": "dark",    "endingType": null,       "inst": { "lead": [],                                          "harmony": ["open fifth string cluster", "ambient breath pads"], "rhythm": [],                                        "bass": ["contrabass pedal drone"], "texture": ["cathedral reverb wash"], "energy": [] } },
+        { "typeId": "verse",   "prog": "dorian",      "feel": "dark",    "endingType": null,       "inst": { "lead": ["sparse solo piano"],                        "harmony": ["open fifth string cluster", "harp arpeggios"],     "rhythm": [],                                        "bass": ["contrabass pedal drone"], "texture": [],                        "energy": [] } },
+        { "typeId": "develop", "prog": "dorian",      "feel": "intense", "endingType": null,       "inst": { "lead": ["sul ponticello violin"],                    "harmony": ["tremolo strings", "open fifth string cluster"],     "rhythm": ["orchestral percussion hits"],             "bass": ["contrabass pedal drone"], "texture": [],                        "energy": ["dramatic build"] } },
+        { "typeId": "chorus",  "prog": "flat-six",    "feel": "intense", "endingType": null,       "inst": { "lead": ["soaring violin line", "sparse solo piano"], "harmony": ["lush orchestral strings", "operatic synth choir"], "rhythm": ["orchestral percussion hits", "half-time feel"], "bass": ["contrabass pedal drone"], "texture": [],                        "energy": ["orchestral swell", "haunting suspension"] } },
+        { "typeId": "outro",   "prog": "pedal-void",  "feel": "dark",    "endingType": "dissolve", "inst": { "lead": ["sparse solo piano"],                        "harmony": ["slow string pads", "ambient breath pads"],         "rhythm": [],                                        "bass": ["contrabass pedal drone"], "texture": ["cathedral reverb wash"], "energy": ["haunting suspension"] } }
+      ]
+    },
+    {
+      "id": "nier-weight-of-world",
+      "name": "Weight of the World",
+      "artist": "Nier Automata",
+      "desc": "The emotional finale — slow choral swell, Dorian piano, operatic soprano, ambient dissolve",
+      "bpm": "76",
+      "theme": "cinematic orchestral anime soundtrack, dramatic score",
+      "lead": "sparse solo piano lead",
+      "mood": "emotional cinematic",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "line-cliche", "feel": "dark",    "endingType": null,       "inst": { "lead": ["sparse solo piano"],                        "harmony": ["string arpeggios", "ambient breath pads"],           "rhythm": [],                                            "bass": ["contrabass pedal drone"], "texture": ["cathedral reverb wash"],         "energy": [] } },
+        { "typeId": "verse",   "prog": "dorian",      "feel": "dark",    "endingType": null,       "inst": { "lead": ["sparse solo piano"],                        "harmony": ["open fifth string cluster", "harp arpeggios"],       "rhythm": [],                                            "bass": ["contrabass pedal drone"], "texture": [],                                "energy": ["haunting suspension"] } },
+        { "typeId": "chorus",  "prog": "flat-six",    "feel": "intense", "endingType": null,       "inst": { "lead": ["soaring violin line", "sparse solo piano"], "harmony": ["lush orchestral strings", "operatic synth choir"],   "rhythm": ["orchestral percussion hits", "half-time feel"], "bass": ["contrabass pedal drone"], "texture": [],                                "energy": ["orchestral swell", "dramatic build"] } },
+        { "typeId": "bridge",  "prog": "minor-plagal","feel": "dark",    "endingType": null,       "inst": { "lead": ["sparse solo piano"],                        "harmony": ["ambient breath pads", "open fifth string cluster"],  "rhythm": [],                                            "bass": ["contrabass pedal drone"], "texture": ["cathedral reverb wash"],         "energy": ["haunting suspension"] } },
+        { "typeId": "outro",   "prog": "pedal-void",  "feel": "dark",    "endingType": "dissolve", "inst": { "lead": ["sparse solo piano"],                        "harmony": ["slow string pads", "ambient breath pads"],           "rhythm": [],                                            "bass": ["contrabass pedal drone"], "texture": ["cathedral reverb wash", "reverse swells"], "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "nier-machine",
+      "name": "Machine Lifeform",
+      "artist": "Nier Automata",
+      "desc": "Mechanical clock pulse over ruins — chromatic dread, glitch artifacts, cold stop",
+      "bpm": "130",
+      "theme": "cinematic orchestral anime soundtrack, dramatic score",
+      "lead": "sul ponticello string lead",
+      "mood": "dark tense",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "chromatic-sink", "feel": "dark",    "endingType": null,   "inst": { "lead": [],                                                "harmony": ["ambient breath pads"],                               "rhythm": ["mechanical clock pulse"],                            "bass": ["contrabass pedal drone"], "texture": ["digital glitch artifacts", "subtle noise floor"], "energy": [] } },
+        { "typeId": "develop", "prog": "phrygian",       "feel": "dark",    "endingType": null,   "inst": { "lead": ["sul ponticello violin"],                          "harmony": ["tremolo strings", "open fifth string cluster"],       "rhythm": ["mechanical clock pulse", "half-time feel"],          "bass": ["deep low rumble"],        "texture": ["digital glitch artifacts"],                       "energy": ["tension riser"] } },
+        { "typeId": "chorus",  "prog": "chromatic-sink", "feel": "intense", "endingType": null,   "inst": { "lead": ["sul ponticello violin", "soaring violin line"],   "harmony": ["lush orchestral strings", "operatic synth choir"],   "rhythm": ["orchestral percussion hits", "mechanical clock pulse"], "bass": ["contrabass pedal drone"], "texture": [],                                                 "energy": ["explosive release", "dramatic build"] } },
+        { "typeId": "bridge",  "prog": "pedal-void",     "feel": "dark",    "endingType": null,   "inst": { "lead": [],                                                "harmony": ["ambient breath pads", "open fifth string cluster"],  "rhythm": [],                                                    "bass": ["contrabass pedal drone"], "texture": ["digital glitch artifacts", "cathedral reverb wash"], "energy": ["haunting suspension"] } },
+        { "typeId": "outro",   "prog": "chromatic-sink", "feel": "dark",    "endingType": "cold", "inst": { "lead": [],                                                "harmony": ["slow string pads"],                                  "rhythm": ["mechanical clock pulse"],                            "bass": ["contrabass pedal drone"], "texture": ["digital glitch artifacts"],                       "energy": [] } }
+      ]
+    },
+    {
+      "id": "nier-village",
+      "name": "Pascal's Village",
+      "artist": "Nier Automata",
+      "desc": "Pastoral machine village — recorder over harp, gentle Dorian warmth, ambient dissolve",
+      "bpm": "72",
+      "theme": "cinematic orchestral anime soundtrack, dramatic score",
+      "lead": "sparse solo piano lead",
+      "mood": "serene nostalgic",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "dorian", "feel": "gentle", "endingType": null,        "inst": { "lead": [],               "harmony": ["harp arpeggios", "string arpeggios"],       "rhythm": [],             "bass": [],               "texture": ["warm room reverb"], "energy": ["soft morning light feel"] } },
+        { "typeId": "theme",   "prog": "dorian", "feel": "warm",   "endingType": null,        "inst": { "lead": ["recorder melody"], "harmony": ["harp arpeggios", "open fifth string cluster"], "rhythm": ["brushed snare"], "bass": ["pizzicato bass"], "texture": [],               "energy": [] } },
+        { "typeId": "chorus",  "prog": "canon",  "feel": "warm",   "endingType": null,        "inst": { "lead": ["recorder melody", "flute ornament"], "harmony": ["string arpeggios", "slow string pads"], "rhythm": ["soft claps"], "bass": ["upright bass feel"], "texture": [], "energy": ["airy lift"] } },
+        { "typeId": "outro",   "prog": "dorian", "feel": "gentle", "endingType": "dissolve",  "inst": { "lead": ["recorder melody"], "harmony": ["harp arpeggios", "ambient breath pads"],   "rhythm": [],             "bass": [],               "texture": ["warm room reverb", "tape hiss"], "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "nier-alien",
+      "name": "Alien Manifestation",
+      "artist": "Nier Automata",
+      "desc": "Abstract machine horror — chromatic bass descent, glitch artifacts, sul ponticello dread, cold cut",
+      "bpm": "145",
+      "theme": "cinematic orchestral anime soundtrack, dramatic score",
+      "lead": "sul ponticello string lead",
+      "mood": "dark tense",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "chromatic-sink", "feel": "dark",    "endingType": null,   "inst": { "lead": [],                                              "harmony": ["ambient breath pads"],                               "rhythm": ["mechanical clock pulse"],                              "bass": ["contrabass pedal drone"], "texture": ["digital glitch artifacts", "subtle noise floor"], "energy": [] } },
+        { "typeId": "develop", "prog": "phrygian",       "feel": "dark",    "endingType": null,   "inst": { "lead": ["sul ponticello violin"],                        "harmony": ["tremolo strings", "open fifth string cluster"],       "rhythm": ["mechanical clock pulse", "orchestral percussion hits"], "bass": ["deep low rumble"],        "texture": ["digital glitch artifacts"],                       "energy": ["tension riser", "dramatic build"] } },
+        { "typeId": "chorus",  "prog": "chromatic-sink", "feel": "intense", "endingType": null,   "inst": { "lead": ["sul ponticello violin", "soaring violin line"], "harmony": ["lush orchestral strings", "operatic synth choir"],   "rhythm": ["orchestral percussion hits", "mechanical clock pulse"], "bass": ["contrabass pedal drone"], "texture": [],                                                 "energy": ["explosive release", "dramatic build"] } },
+        { "typeId": "outro",   "prog": "chromatic-sink", "feel": "dark",    "endingType": "cold", "inst": { "lead": [],                                              "harmony": ["slow string pads"],                                  "rhythm": ["mechanical clock pulse"],                              "bass": ["contrabass pedal drone"], "texture": ["digital glitch artifacts"],                       "energy": [] } }
+      ]
+    }
+  ]
+}

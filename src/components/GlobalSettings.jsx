@@ -1,10 +1,9 @@
-import { THEME_OPTS, LEAD_OPTS, MOOD_OPTS } from '../data';
 import styles from './GlobalSettings.module.css';
 
 const BPM_MIN = 40;
 const BPM_MAX = 200;
 
-export default function GlobalSettings({ G, onChange }) {
+export default function GlobalSettings({ G, onChange, themeOpts, leadOpts, moodOpts }) {
   const pick = (key, val) => onChange(prev => ({ ...prev, [key]: val }));
   const bpmPct = ((Number(G.bpm) - BPM_MIN) / (BPM_MAX - BPM_MIN)) * 100;
 
@@ -30,7 +29,7 @@ export default function GlobalSettings({ G, onChange }) {
       <div className={styles.gControl}>
         <div className={styles.gLabel}>Theme Style</div>
         <div className={styles.gChips}>
-          {THEME_OPTS.map(o => (
+          {themeOpts.map(o => (
             <div
               key={o.v}
               className={`${styles.chip}${G.theme === o.v ? ' ' + styles.chipOnGold : ''}`}
@@ -43,7 +42,7 @@ export default function GlobalSettings({ G, onChange }) {
       <div className={styles.gControl}>
         <div className={styles.gLabel}>Lead Sound</div>
         <div className={styles.gChips}>
-          {LEAD_OPTS.map(o => (
+          {leadOpts.map(o => (
             <div
               key={o.v}
               className={`${styles.chip}${G.lead === o.v ? ' ' + styles.chipOnGold : ''}`}
@@ -56,7 +55,7 @@ export default function GlobalSettings({ G, onChange }) {
       <div className={styles.gControl}>
         <div className={styles.gLabel}>Overall Mood</div>
         <div className={styles.gChips}>
-          {MOOD_OPTS.map(o => (
+          {moodOpts.map(o => (
             <div
               key={o.v}
               className={`${styles.chip}${G.mood === o.v ? ' ' + styles.chipOnGold : ''}`}

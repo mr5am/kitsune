@@ -5,6 +5,64 @@
     "lead": "sparse solo piano lead",
     "mood": "dark tense"
   },
+  "pools": {
+    "themeOpts": [
+      { "v": "Nier Automata orchestral game soundtrack, ruined world melancholy", "label": "Ruined OST" },
+      { "v": "haunting post-apocalyptic piano and strings, operatic synthetic choir", "label": "Haunting Choir" },
+      { "v": "mechanical baroque machine music, clockwork percussion and chamber strings", "label": "Machine Baroque" },
+      { "v": "pastoral music box village score, recorder harp and soft strings", "label": "Pascal Village" },
+      { "v": "abstract alien machine horror, chromatic strings and digital artifacts", "label": "Alien Horror" }
+    ],
+    "leadOpts": [
+      { "v": "sparse solo piano lead", "label": "Sparse Piano" },
+      { "v": "wordless operatic vocalise lead", "label": "Vocalise" },
+      { "v": "sul ponticello string lead", "label": "Sul Ponticello" },
+      { "v": "recorder melody lead", "label": "Recorder" },
+      { "v": "harp and piano doubled lead", "label": "Harp Piano" },
+      { "v": "fragile music box style synth lead", "label": "Music Box Synth" }
+    ],
+    "moodOpts": [
+      { "v": "ruined world melancholy", "label": "Ruined" },
+      { "v": "emotional cinematic elegy", "label": "Elegy" },
+      { "v": "cold mechanical dread", "label": "Mechanical" },
+      { "v": "pastoral artificial innocence", "label": "Pastoral" },
+      { "v": "alien choral terror", "label": "Alien" }
+    ],
+    "instPool": {
+      "lead":    ["sparse solo piano", "wordless operatic vocalise", "childlike vocal pad", "sul ponticello violin", "solo cello lament", "recorder melody", "flute ornament", "music box synth melody", "harp glissando phrase"],
+      "harmony": ["open fifth string cluster", "slow string pads", "tremolo strings", "lush orchestral strings", "ambient breath pads", "operatic synth choir", "wordless choir pad", "harp arpeggios", "organ wash", "baroque string ostinato"],
+      "rhythm":  ["mechanical clock pulse", "orchestral percussion hits", "distant taiko hits", "muted machine tick", "half-time feel", "brushed snare", "soft claps", "war drum pulse"],
+      "bass":    ["contrabass pedal drone", "deep low rumble", "pizzicato bass", "upright bass feel", "subharmonic machine drone", "low string ostinato"],
+      "texture": ["cathedral reverb wash", "digital glitch artifacts", "subtle noise floor", "wind through ruins", "warm room reverb", "tape hiss", "reverse swells", "metallic resonance"],
+      "energy":  ["haunting suspension", "orchestral swell", "dramatic build", "tension riser", "warm golden fade", "soft morning light feel", "explosive release", "ritual choral swell"]
+    },
+    "feels": ["dark", "intense", "gentle", "warm", "ruined", "elegiac", "mechanical", "pastoral", "ritual", "terrifying"],
+    "feelWords": {
+      "dark": "tense",
+      "intense": "driving",
+      "gentle": "soft",
+      "warm": "warm",
+      "ruined": "hollow",
+      "elegiac": "grieving",
+      "mechanical": "clockwork",
+      "pastoral": "fragile",
+      "ritual": "ceremonial",
+      "terrifying": "chromatic"
+    },
+    "exclude": "trap, 8-bit, chiptune, EDM drop, dance pop, cute kawaii pop, country, jazz piano, heavy metal, harsh modern dubstep, radio pop vocals, intelligible lead singing, rap, acoustic indie strumming, bright comedy score",
+    "progs": [
+      { "id": "pedal-void", "name": "Ruined Pedal", "sunoStyle": "held bass pedal note anchoring ruined space, shifting minor chords floating above, static drone beneath drifting strings and choir", "lyricTag": "ruined pedal harmony", "desc": "Bass holds still - chords drift through empty ruins", "feel": "suspended grief", "reference": "Nier Automata - City Ruins" },
+      { "id": "dorian", "name": "Android Dorian", "sunoStyle": "Dorian modal colour, minor key lifted by a raised sixth, sparse piano and strings turning grief into fragile warmth", "lyricTag": "android Dorian melancholy", "desc": "Minor sadness lifted by one warm modal colour", "feel": "bittersweet", "reference": "Nier Automata - Weight of the World" },
+      { "id": "flat-six", "name": "Weight Cadence", "sunoStyle": "flat-six minor cadence, descending dark chord pull, operatic choir and strings landing with tragic emotional weight", "lyricTag": "tragic flat-six cadence", "desc": "Dark flat-six fall - heavy emotional landing", "feel": "tragic", "reference": "Nier Automata - Weight of the World" },
+      { "id": "line-cliche", "name": "Vague Hope", "sunoStyle": "inner voice creeping upward by half steps under still piano, fragile hope moving inside suspended harmony", "lyricTag": "fragile inner voice", "desc": "A hidden voice rises inside stillness", "feel": "fragile hope", "reference": "Nier Automata - Vague Hope" },
+      { "id": "minor-plagal", "name": "Machine Sigh", "sunoStyle": "minor plagal sigh resolving into pale major warmth, emotional weight releasing through piano and choir haze", "lyricTag": "machine plagal sigh", "desc": "One dark chord exhales into pale warmth", "feel": "release", "reference": "Nier Automata elegy cues" },
+      { "id": "canon", "name": "Pascal Canon", "sunoStyle": "gentle cascading canon sequence, recorder and harp innocence, artificial village warmth with pastoral motion", "lyricTag": "pastoral canon flow", "desc": "Cascading village chords - gentle artificial warmth", "feel": "innocent", "reference": "Nier Automata - Pascal's Village" },
+      { "id": "phrygian", "name": "Machine Phrygian", "sunoStyle": "flat-second Phrygian tension, ancient machine ritual colour, strings and clock pulse brooding without release", "lyricTag": "machine Phrygian shadow", "desc": "Flat-second pressure - ritual machine dread", "feel": "ritual dread", "reference": "Nier Automata - Machine Lifeform" },
+      { "id": "chromatic-sink", "name": "Alien Sink", "sunoStyle": "chromatic half-step descent in the bass, abstract machine horror, glitch artifacts and sul ponticello strings eroding the ground", "lyricTag": "alien chromatic descent", "desc": "Bass falls by half steps into alien dark", "feel": "terror", "reference": "Nier Automata - Alien Manifestation" },
+      { "id": "modulation", "name": "Memory Shift", "sunoStyle": "key shifting under sustained vocal pads, memory and identity changing colour, cinematic modulation into grief", "lyricTag": "memory colour shift", "desc": "The key changes - memory turns unfamiliar", "feel": "disorientation", "reference": "Nier Automata choral variations" },
+      { "id": "neapolitan", "name": "Ritual Arrival", "sunoStyle": "half-step surprise chord before grand choral arrival, classical dramatic resolution with apocalyptic weight", "lyricTag": "ritual surprise arrival", "desc": "Half-step shock before the choir lands", "feel": "awe", "reference": "Nier Automata boss score" }
+    ]
+  },
   "presets": [
     {
       "id": "nier-city-ruins",

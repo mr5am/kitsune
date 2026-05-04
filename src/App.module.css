@@ -67,13 +67,13 @@
   font-family: var(--font-mono); font-size: 0.65rem;
   letter-spacing: 0.14em; text-transform: uppercase;
   padding: 9px 18px; border-radius: 6px;
-  background: rgba(232,201,106,0.07);
+  background: var(--gold-bg);
   border: 1px solid var(--gold2);
   color: var(--gold); cursor: pointer;
   transition: all 0.16s; white-space: nowrap;
 }
 .surpriseBtn:hover {
-  background: rgba(232,201,106,0.14);
+  background: var(--gold-bg-hi);
   border-color: var(--gold);
   box-shadow: 0 0 16px rgba(232,201,106,0.18);
 }
@@ -91,17 +91,17 @@
   transition: all 0.16s; white-space: nowrap;
 }
 .presetsBtn:hover {
-  background: rgba(232,201,106,0.07);
+  background: var(--gold-bg);
   border-color: var(--gold2);
   color: var(--gold);
 }
 .presetsBtnActive {
-  background: rgba(232,201,106,0.07);
+  background: var(--gold-bg);
   border-color: var(--gold2);
   color: var(--gold);
 }
 .presetsBtnActive:hover {
-  background: rgba(232,201,106,0.13);
+  background: var(--gold-bg-hi);
   border-color: var(--gold);
   box-shadow: 0 0 12px rgba(232,201,106,0.15);
 }
@@ -117,7 +117,7 @@
   transition: all 0.16s; white-space: nowrap;
 }
 .settingsFileBtn:hover {
-  background: rgba(108,160,232,0.07);
+  background: var(--blue-bg);
   border-color: var(--blue);
   color: var(--blue);
 }
@@ -127,16 +127,31 @@
   color: var(--dim); letter-spacing: 0.12em;
 }
 
+.themeBtn {
+  margin-left: auto;
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; flex-shrink: 0;
+  font-size: 0.95rem; line-height: 1;
+  background: transparent; border: 1px solid var(--border);
+  border-radius: 6px; cursor: pointer; color: var(--dim);
+  transition: all 0.16s;
+}
+.themeBtn:hover {
+  border-color: var(--border2);
+  color: var(--cream);
+  background: var(--hover-bg);
+}
+
 .sectionsArea { display: flex; flex-direction: column; gap: 12px; margin-bottom: 14px; }
 
 .addBar {
   display: flex; align-items: center; gap: 12px;
   padding: 11px 16px;
-  background: var(--panel); border: 1px dashed rgba(100,140,220,0.18);
+  background: var(--panel); border: 1px dashed var(--border);
   border-radius: 10px; cursor: pointer;
   transition: all 0.18s; margin-bottom: 44px;
 }
-.addBar:hover { border-color: rgba(100,140,220,0.38); background: var(--panel2); }
+.addBar:hover { border-color: var(--border2); background: var(--panel2); }
 .addPlus { font-family: var(--font-mono); font-size: 1.1rem; color: var(--blue2); }
 .addLbl {
   font-family: var(--font-mono); font-size: 0.62rem;

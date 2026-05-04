@@ -4,7 +4,7 @@
   border-radius: 10px; overflow: hidden;
   transition: border-color 0.2s;
 }
-.open { border-color: rgba(108,160,232,0.32); }
+.open { border-color: var(--blue-border2); }
 
 .ssHeader {
   display: flex; align-items: stretch;
@@ -42,7 +42,7 @@
 .ssProgTag {
   font-family: var(--font-mono); font-size: 0.57rem;
   padding: 2px 8px; border-radius: 3px;
-  background: rgba(108,160,232,0.08); border: 1px solid rgba(108,160,220,0.2);
+  background: var(--blue-bg); border: 1px solid var(--blue-border);
   color: var(--blue2); flex-shrink: 0;
 }
 .ssInstPreview {
@@ -59,7 +59,7 @@
   cursor: pointer; padding: 4px 5px; border-radius: 3px;
   transition: all 0.14s; line-height: 1;
 }
-.iconBtn:hover { color: var(--cream); background: rgba(255,255,255,0.05); }
+.iconBtn:hover { color: var(--cream); background: var(--hover-bg); }
 .dice:hover { color: var(--teal); }
 .dup:hover  { color: var(--blue); }
 .del:hover  { color: var(--rose); }
@@ -96,13 +96,13 @@
   color: var(--dim); cursor: pointer; transition: all 0.14s;
 }
 .feelOpt:hover { color: var(--cream); }
-.feelOptOn { border-color: var(--gold2); color: var(--gold); background: rgba(232,201,106,0.08); }
+.feelOptOn { border-color: var(--gold2); color: var(--gold); background: var(--gold-bg); }
 
 .endingRow {
   display: flex; align-items: center; gap: 10px; margin-top: 10px;
   padding-top: 10px; border-top: 1px solid var(--border);
 }
-.endingOptOn { border-color: var(--teal); color: var(--teal); background: rgba(94,207,192,0.08); }
+.endingOptOn { border-color: var(--teal); color: var(--teal); background: var(--teal-bg); }
 
 @media (max-width: 680px) {
   .ssGrid         { grid-template-columns: 1fr; }

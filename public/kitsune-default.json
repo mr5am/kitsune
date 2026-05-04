@@ -46,6 +46,118 @@
       "dark":   "tense",
       "euphoric": "soaring"
     },
-    "exclude": "thin bell lead, celesta, glockenspiel, music box, soft lullaby piano, koto, shamisen, folk instruments, choir vocals, singing, trap, 8-bit, chiptune, acoustic guitar, new age, slow ballad, sleepy, ambient only, harsh distortion, heavy metal"
-  }
+    "exclude": "thin bell lead, celesta, glockenspiel, music box, soft lullaby piano, koto, shamisen, folk instruments, choir vocals, singing, trap, 8-bit, chiptune, acoustic guitar, new age, slow ballad, sleepy, ambient only, harsh distortion, heavy metal",
+    "progs": [
+      { "id": "royal-road", "name": "Royal Road", "sunoStyle": "warm yearning chord loop, bittersweet lift and settle, strings rising then resolving", "lyricTag": "warm resolving harmony", "desc": "Warm lift and settle - the yearning anime arc", "feel": "yearning", "reference": "Your Lie in April OP" },
+      { "id": "secondary-dom", "name": "Hidden Pull", "sunoStyle": "unexpected emotional chord colour, tension pull toward resolution, sudden harmonic warmth", "lyricTag": "emotional harmonic pull", "desc": "Unexpected chord tug - sudden harmonic warmth", "feel": "longing", "reference": "Anohana ED" },
+      { "id": "anime-prog", "name": "Anime Arc", "sunoStyle": "uneasy opening chord, darkness lifting into wonder, tension unfolding into light", "lyricTag": "dark-to-wonder harmonic arc", "desc": "Opens in shadow, brightens into wonder", "feel": "wonder", "reference": "Neon Genesis Evangelion OP" },
+      { "id": "line-cliche", "name": "Inner Shimmer", "sunoStyle": "inner melody creeping upward by half steps, stillness with subtle internal motion, shimmer underneath", "lyricTag": "slow inner voice shimmer", "desc": "Hidden voice creeping upward - shimmer beneath", "feel": "stillness", "reference": "Mushishi OST" },
+      { "id": "modulation", "name": "Colour Shift", "sunoStyle": "key shifting upward, mood darkening, tonal landscape changing colour", "lyricTag": "key colour shift", "desc": "The whole key changes emotional colour", "feel": "dread", "reference": "Attack on Titan OST" },
+      { "id": "black-adder", "name": "Black Adder", "sunoStyle": "sudden dramatic chord stab, sharp unexpected harmonic peak, one tense hit then release", "lyricTag": "dramatic harmonic stab", "desc": "One jarring peak chord - maximum drama", "feel": "shock", "reference": "Demon Slayer OST" },
+      { "id": "flat-six", "name": "Dark Cadence", "sunoStyle": "descending dark chord pull, minor colour, heavy emotional landing, melancholic cadence", "lyricTag": "dark descending cadence", "desc": "Heavy chords falling to resolution - dark emotion", "feel": "grief", "reference": "Violet Evergarden OST" },
+      { "id": "axis", "name": "The Axis", "sunoStyle": "gentle circular chord movement, bittersweet longing, minor opening into warm major settling", "lyricTag": "bittersweet circular motion", "desc": "The J-pop loop - bittersweet and circular", "feel": "bittersweet", "reference": "Bakemonogatari OP" },
+      { "id": "andalusian", "name": "Andalusian Descent", "sunoStyle": "chords stepping downward one by one, brooding descent, ground sinking beneath the melody", "lyricTag": "dark descending steps", "desc": "Chords stepping downward - brooding descent", "feel": "brooding", "reference": "Re:Zero OST" },
+      { "id": "nat-minor", "name": "Shadow Descent", "sunoStyle": "heavy minor chords falling in sequence, aeolian sadness, slow dark pull downward", "lyricTag": "melancholic minor fall", "desc": "Heavier dark fall - aeolian sadness", "feel": "melancholy", "reference": "Your Name OST" },
+      { "id": "canon", "name": "Canon Flow", "sunoStyle": "gentle cascading chords, warm even forward motion, tender unfolding sequence", "lyricTag": "warm cascading sequence", "desc": "Tender cascading chords - familiar forward warmth", "feel": "warmth", "reference": "Clannad OST" },
+      { "id": "neapolitan", "name": "Grand Arrival", "sunoStyle": "half-step surprise chord before the landing, sudden tension then grand arrival, classical dramatic resolution", "lyricTag": "grand surprise resolution", "desc": "Surprise chord before the landing - classical drama", "feel": "triumph", "reference": "Gurren Lagann OP" },
+      { "id": "minor-plagal", "name": "The Sigh", "sunoStyle": "minor chord sighing into major, emotional weight releasing, dark-to-light exhale", "lyricTag": "emotional dark-to-light sigh", "desc": "One dark chord exhaling into warmth", "feel": "release", "reference": "March Comes in Like a Lion OST" },
+      { "id": "phrygian", "name": "Ancient Shadow", "sunoStyle": "ancient dark modal colour, unresolved minor tension, mysterious brooding shadow", "lyricTag": "dark modal shadow", "desc": "Ancient, unresolved darkness - brooding modal", "feel": "mystery", "reference": "Made in Abyss OST" },
+      { "id": "yonezu", "name": "Yonezu Lift", "sunoStyle": "unexpected bright chord leap upward, modern emotional colour shift, pop harmonic surprise", "lyricTag": "bright pop harmonic lift", "desc": "Sudden bright leap then emotional settle", "feel": "euphoria", "reference": "Chainsaw Man OP" },
+      { "id": "dorian", "name": "Dorian Arc", "sunoStyle": "dorian modal colour, minor key lifted by major fourth chord, melancholic warmth refusing pure darkness", "lyricTag": "dorian bittersweet arc", "desc": "Minor with a raised sixth - bittersweet refusal of dark", "feel": "melancholic", "reference": "Nier Automata - Weight of the World" },
+      { "id": "pedal-void", "name": "Pedal Void", "sunoStyle": "held bass pedal note anchoring ground, shifting chords floating above, static drone beneath drifting harmony", "lyricTag": "suspended pedal harmony", "desc": "Bass holds still - chords drift above like smoke", "feel": "suspended", "reference": "Nier Automata - City Ruins" },
+      { "id": "chromatic-sink", "name": "Chromatic Sink", "sunoStyle": "chromatic half-step descent in the bass, dark creeping downward motion, ground eroding beneath static harmony", "lyricTag": "chromatic bass descent", "desc": "Ground falls away - half-step by half-step into dark", "feel": "dread", "reference": "Nier Automata - Alien Manifestation" }
+    ]
+  },
+  "presets": [
+    {
+      "id": "default-evangelion-cruel-angel",
+      "name": "Cruel Angel Arc",
+      "artist": "Neon Genesis Evangelion",
+      "desc": "Iconic 90s anime pop drive - bright synth hook, dramatic chord lift, euphoric chorus",
+      "bpm": "128",
+      "theme": "Japanese city pop retro electronic, 1980s anime",
+      "lead": "clean bright synth lead",
+      "mood": "euphoric triumphant",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",    "prog": "anime-prog",    "feel": "warm",     "endingType": null,   "inst": { "lead": ["bright pizzicato strings"], "harmony": ["warm synth pads", "string arpeggios"], "rhythm": ["four-on-floor kick", "syncopated hi-hats"], "bass": ["warm sub bass"], "texture": ["golden shimmer"], "energy": ["gentle energy lift"] } },
+        { "typeId": "theme",    "prog": "axis",          "feel": "warm",     "endingType": null,   "inst": { "lead": ["clean electric guitar riff", "synth lead layer"], "harmony": ["warm synth pads"], "rhythm": ["four-on-floor kick", "snapped claps"], "bass": ["walking bass"], "texture": [], "energy": ["orchestral swell"] } },
+        { "typeId": "prechorus","prog": "secondary-dom", "feel": "intense",  "endingType": null,   "inst": { "lead": ["piano accent line"], "harmony": ["tremolo strings", "warm synth pads"], "rhythm": ["punched snare"], "bass": ["warm sub bass"], "texture": [], "energy": ["tension riser"] } },
+        { "typeId": "chorus",   "prog": "yonezu",        "feel": "euphoric", "endingType": null,   "inst": { "lead": ["soaring violin line", "synth lead layer"], "harmony": ["lush orchestral strings", "warm synth pads"], "rhythm": ["four-on-floor kick", "snapped claps"], "bass": ["dubstep bass pulse"], "texture": ["golden shimmer"], "energy": ["explosive release", "orchestral swell"] } },
+        { "typeId": "outro",    "prog": "royal-road",    "feel": "warm",     "endingType": "fade", "inst": { "lead": ["synth lead layer"], "harmony": ["slow string pads", "warm synth pads"], "rhythm": ["four-on-floor kick"], "bass": ["warm sub bass"], "texture": ["tape hiss"], "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "default-cowboy-bebop-tank",
+      "name": "Space Bounty Swing",
+      "artist": "Cowboy Bebop",
+      "desc": "Fast action opener - walking bass, brushed snare, sharp guitar stabs, sudden stops",
+      "bpm": "164",
+      "theme": "cinematic orchestral anime soundtrack, dramatic score",
+      "lead": "overdriven electric guitar lead",
+      "mood": "euphoric triumphant",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "black-adder",   "feel": "intense",  "endingType": null,   "inst": { "lead": ["clean electric guitar riff"], "harmony": ["pizzicato strings"], "rhythm": ["punched snare", "syncopated hi-hats"], "bass": ["walking bass"], "texture": ["warm room reverb"], "energy": ["explosive release"] } },
+        { "typeId": "theme",   "prog": "axis",          "feel": "intense",  "endingType": null,   "inst": { "lead": ["overdriven electric guitar lead"], "harmony": ["string arpeggios"], "rhythm": ["driving rock drums", "snapped claps"], "bass": ["walking bass"], "texture": ["guitar amp distortion"], "energy": ["gentle energy lift"] } },
+        { "typeId": "develop", "prog": "secondary-dom", "feel": "intense",  "endingType": null,   "inst": { "lead": ["piano accent line", "clean electric guitar riff"], "harmony": ["pizzicato strings", "warm synth pads"], "rhythm": ["brushed snare", "syncopated hi-hats"], "bass": ["walking bass"], "texture": [], "energy": ["tension riser"] } },
+        { "typeId": "chorus",  "prog": "neapolitan",    "feel": "euphoric", "endingType": null,   "inst": { "lead": ["overdriven electric guitar lead", "soaring violin line"], "harmony": ["lush orchestral strings"], "rhythm": ["driving rock drums", "snapped claps"], "bass": ["walking bass"], "texture": ["guitar amp distortion"], "energy": ["explosive release"] } },
+        { "typeId": "outro",   "prog": "black-adder",   "feel": "intense",  "endingType": "cold", "inst": { "lead": ["clean electric guitar riff"], "harmony": ["pizzicato strings"], "rhythm": ["punched snare"], "bass": ["walking bass"], "texture": [], "energy": [] } }
+      ]
+    },
+    {
+      "id": "default-tokyo-ghoul-unravel",
+      "name": "Unravelled Shadow",
+      "artist": "Tokyo Ghoul",
+      "desc": "Dark alt-rock intensity - sparse piano verse, Phrygian tension, guitar-driven chorus",
+      "bpm": "135",
+      "theme": "dark indie rock anime opening theme, electric guitar driven",
+      "lead": "overdriven electric guitar lead",
+      "mood": "dark tense",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",    "prog": "line-cliche", "feel": "dark",    "endingType": null,   "inst": { "lead": ["sparse solo piano"], "harmony": ["ambient breath pads"], "rhythm": [], "bass": ["deep low rumble"], "texture": ["subtle noise floor"], "energy": ["haunting suspension"] } },
+        { "typeId": "verse",    "prog": "phrygian",    "feel": "dark",    "endingType": null,   "inst": { "lead": ["piano accent line"], "harmony": ["slow string pads", "open fifth string cluster"], "rhythm": ["half-time feel"], "bass": ["deep low rumble"], "texture": ["guitar amp distortion"], "energy": [] } },
+        { "typeId": "prechorus","prog": "modulation",  "feel": "intense", "endingType": null,   "inst": { "lead": ["clean electric guitar riff"], "harmony": ["tremolo strings"], "rhythm": ["punched snare"], "bass": ["distorted bass guitar"], "texture": ["reverse swells"], "energy": ["tension riser"] } },
+        { "typeId": "chorus",   "prog": "flat-six",    "feel": "intense", "endingType": null,   "inst": { "lead": ["overdriven electric guitar lead", "soaring violin line"], "harmony": ["lush orchestral strings", "tremolo strings"], "rhythm": ["driving rock drums", "punched snare"], "bass": ["distorted bass guitar"], "texture": ["guitar amp distortion"], "energy": ["explosive release", "dramatic build"] } },
+        { "typeId": "outro",    "prog": "line-cliche", "feel": "dark",    "endingType": "cold", "inst": { "lead": ["sparse solo piano"], "harmony": ["ambient breath pads"], "rhythm": [], "bass": ["deep low rumble"], "texture": ["subtle noise floor"], "energy": ["haunting suspension"] } }
+      ]
+    },
+    {
+      "id": "default-demon-slayer-gurenge",
+      "name": "Crimson Blade Lift",
+      "artist": "Demon Slayer",
+      "desc": "Modern shonen power anthem - guitar drive, bright harmonic lift, orchestral payoff",
+      "bpm": "134",
+      "theme": "electronic J-pop anime theme, bright synth pop drive",
+      "lead": "overdriven electric guitar lead",
+      "mood": "euphoric triumphant",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",    "prog": "black-adder",   "feel": "intense",  "endingType": null,      "inst": { "lead": ["overdriven electric guitar lead"], "harmony": ["tremolo strings"], "rhythm": ["punched snare"], "bass": ["dubstep bass pulse"], "texture": ["guitar amp distortion"], "energy": ["explosive release"] } },
+        { "typeId": "verse",    "prog": "axis",          "feel": "warm",     "endingType": null,      "inst": { "lead": ["clean electric guitar riff"], "harmony": ["warm synth pads", "string arpeggios"], "rhythm": ["four-on-floor kick", "syncopated hi-hats"], "bass": ["warm sub bass"], "texture": [], "energy": [] } },
+        { "typeId": "prechorus","prog": "secondary-dom", "feel": "intense",  "endingType": null,      "inst": { "lead": ["piano accent line"], "harmony": ["tremolo strings", "lush orchestral strings"], "rhythm": ["punched snare"], "bass": ["dubstep bass pulse"], "texture": ["reverse swells"], "energy": ["tension riser"] } },
+        { "typeId": "chorus",   "prog": "yonezu",        "feel": "euphoric", "endingType": null,      "inst": { "lead": ["overdriven electric guitar lead", "soaring violin line"], "harmony": ["lush orchestral strings", "warm synth pads"], "rhythm": ["driving rock drums", "snapped claps"], "bass": ["dubstep bass pulse"], "texture": ["golden shimmer"], "energy": ["orchestral swell", "explosive release"] } },
+        { "typeId": "outro",    "prog": "neapolitan",    "feel": "euphoric", "endingType": "sustain", "inst": { "lead": ["soaring violin line"], "harmony": ["lush orchestral strings", "slow string pads"], "rhythm": ["driving rock drums"], "bass": ["warm sub bass"], "texture": ["warm room reverb"], "energy": ["orchestral swell"] } }
+      ]
+    },
+    {
+      "id": "default-fma-again",
+      "name": "Alchemy Again",
+      "artist": "Fullmetal Alchemist: Brotherhood",
+      "desc": "Bittersweet rock opening - piano accents, yearning guitar, bright final lift",
+      "bpm": "140",
+      "theme": "dark indie rock anime opening theme, electric guitar driven",
+      "lead": "clean bright synth lead",
+      "mood": "emotional cinematic",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",    "prog": "royal-road",    "feel": "warm",     "endingType": null,   "inst": { "lead": ["piano accent line"], "harmony": ["string arpeggios", "warm synth pads"], "rhythm": ["syncopated hi-hats"], "bass": ["warm sub bass"], "texture": ["tape hiss"], "energy": ["gentle energy lift"] } },
+        { "typeId": "verse",    "prog": "axis",          "feel": "warm",     "endingType": null,   "inst": { "lead": ["clean electric guitar riff"], "harmony": ["string arpeggios"], "rhythm": ["four-on-floor kick", "syncopated hi-hats"], "bass": ["walking bass"], "texture": [], "energy": [] } },
+        { "typeId": "prechorus","prog": "line-cliche",   "feel": "dark",     "endingType": null,   "inst": { "lead": ["piano accent line"], "harmony": ["tremolo strings", "slow string pads"], "rhythm": ["half-time feel"], "bass": ["deep low rumble"], "texture": ["reverse swells"], "energy": ["dramatic build"] } },
+        { "typeId": "chorus",   "prog": "royal-road",    "feel": "euphoric", "endingType": null,   "inst": { "lead": ["soaring violin line", "synth lead layer"], "harmony": ["lush orchestral strings", "warm synth pads"], "rhythm": ["driving rock drums", "snapped claps"], "bass": ["dubstep bass pulse"], "texture": ["golden shimmer"], "energy": ["orchestral swell", "explosive release"] } },
+        { "typeId": "outro",    "prog": "minor-plagal",  "feel": "warm",     "endingType": "fade", "inst": { "lead": ["piano accent line"], "harmony": ["slow string pads"], "rhythm": [], "bass": ["warm sub bass"], "texture": ["warm room reverb"], "energy": ["warm golden fade"] } }
+      ]
+    }
+  ]
 }

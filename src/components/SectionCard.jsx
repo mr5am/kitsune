@@ -1,4 +1,4 @@
-import { TYPES, PROGS, ENDING_TYPES } from '../data';
+import { TYPES, ENDING_TYPES } from '../data';
 import ProgPicker from './ProgPicker';
 import InstLayers from './InstLayers';
 import styles from './SectionCard.module.css';
@@ -12,9 +12,9 @@ function barClass(typeId) {
   return map[typeId] || '';
 }
 
-export default function SectionCard({ section: s, index, total, onToggleOpen, onRemove, onMove, onSetProg, onToggleInst, onSetFeel, onSetEndingType, onRandomize, onDuplicate, feels, instPool }) {
+export default function SectionCard({ section: s, index, total, onToggleOpen, onRemove, onMove, onSetProg, onToggleInst, onSetFeel, onSetEndingType, onRandomize, onDuplicate, feels, instPool, progs }) {
   const T = TYPES.find(t => t.id === s.typeId);
-  const P = PROGS.find(p => p.id === s.prog);
+  const P = progs.find(p => p.id === s.prog);
   const allInst = Object.values(s.inst).flat();
   const preview = allInst.slice(0, 4).join(', ') + (allInst.length > 4 ? '…' : '');
 
@@ -50,7 +50,7 @@ export default function SectionCard({ section: s, index, total, onToggleOpen, on
           <div className={styles.ssGrid}>
             <div>
               <div className={styles.colLabel}>Harmonic Colour</div>
-              <ProgPicker selectedProg={s.prog} onSelect={p => onSetProg(s.id, p)} />
+              <ProgPicker selectedProg={s.prog} onSelect={p => onSetProg(s.id, p)} progs={progs} />
             </div>
             <div>
               <div className={styles.colLabel}>Instrument Layers</div>

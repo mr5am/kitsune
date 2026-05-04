@@ -8,13 +8,13 @@ const TABS = [
   { key: 'lyrics',  label: 'Lyrics',        fieldLabel: 'Lyrics',         copyLabel: 'Copy Lyrics',   primary: false, textCls: 'tLyrics' },
 ];
 
-export default function OutputBar({ G, sections, onCopy, exclude, feelWords }) {
+export default function OutputBar({ G, sections, onCopy, exclude, feelWords, progs }) {
   const [activeTab, setActiveTab] = useState('style');
   const [nameIndex, setNameIndex] = useState(0);
 
   useEffect(() => { setNameIndex(0); }, [G, sections]);
 
-  const { style, exclude: excl, lyrics } = buildOutputs(G, sections, exclude, feelWords);
+  const { style, exclude: excl, lyrics } = buildOutputs(G, sections, exclude, feelWords, progs);
   const panels = { style, exclude: excl, lyrics };
   const songName = buildSongName(G, sections, nameIndex);
 

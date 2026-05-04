@@ -278,4 +278,5 @@ export const DEFAULT_POOLS = {
   feels:     FEELS,
   feelWords: FEEL_WORDS,
   exclude:   EXCLUDE,
+  progs:     PROGS,
 };

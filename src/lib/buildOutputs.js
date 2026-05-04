@@ -42,13 +42,13 @@ export function buildSongName(G, sections, index = 0) {
   return pool[seed % pool.length];
 }
 
-export function buildOutputs(G, sections, exclude, feelWords) {
+export function buildOutputs(G, sections, exclude, feelWords, progs = PROGS) {
   if (!sections.length) {
     return { style: '— add sections above —', exclude, lyrics: '— add sections above —' };
   }
 
   const progTokens = [...new Set(
-    sections.map(s => PROGS.find(p => p.id === s.prog)?.sunoStyle).filter(Boolean)
+    sections.map(s => progs.find(p => p.id === s.prog)?.sunoStyle).filter(Boolean)
   )];
   const allInst = [...new Set(sections.flatMap(s => Object.values(s.inst).flat()))];
   const endingTokens = [...new Set(
@@ -70,7 +70,7 @@ export function buildOutputs(G, sections, exclude, feelWords) {
   const lyricLines = ['[Instrumental]', ''];
   sections.forEach(s => {
     const T = TYPES.find(t => t.id === s.typeId);
-    const P = PROGS.find(p => p.id === s.prog);
+    const P = progs.find(p => p.id === s.prog);
     const instParts = ['lead', 'harmony', 'rhythm', 'bass', 'texture', 'energy']
       .flatMap(cat => s.inst[cat] || []);
     const progHint = P ? P.lyricTag : '';

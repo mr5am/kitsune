@@ -1,12 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
-import { PROGS } from '../data';
 import styles from './ProgPicker.module.css';
 
-export default function ProgPicker({ selectedProg, onSelect }) {
+export default function ProgPicker({ selectedProg, onSelect, progs }) {
   const [open, setOpen] = useState(false);
   const [openTooltipId, setOpenTooltipId] = useState(null);
   const ref = useRef(null);
-  const P = PROGS.find(p => p.id === selectedProg) || PROGS[0];
+  const P = progs.find(p => p.id === selectedProg) || progs[0];
 
   useEffect(() => {
     if (!open) return;
@@ -37,7 +36,7 @@ export default function ProgPicker({ selectedProg, onSelect }) {
 
       {open && (
         <div className={styles.dropdown}>
-          {PROGS.map(p => {
+          {progs.map(p => {
             const hasTooltip = p.feel && p.reference;
             return (
               <div

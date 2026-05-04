@@ -88,7 +88,7 @@ export default function SettingsFileModal({ open, onClose, G, pools, userPresets
             <div className={styles.previewRow}>
               <span className={styles.previewKey}>Pools</span>
               <span className={styles.previewVal}>
-                {pools.themeOpts.length} theme · {pools.leadOpts.length} lead · {pools.moodOpts.length} mood · {instTotal(pools.instPool)} inst
+                {pools.themeOpts.length} theme · {pools.leadOpts.length} lead · {pools.moodOpts.length} mood · {instTotal(pools.instPool)} inst · {pools.progs?.length ?? 0} progs
               </span>
             </div>
             <div className={styles.previewRow}>
@@ -141,7 +141,7 @@ export default function SettingsFileModal({ open, onClose, G, pools, userPresets
                 <div className={styles.previewRow}>
                   <span className={styles.previewKey}>Pools</span>
                   <span className={styles.previewVal}>
-                    {parsed.pools.themeOpts?.length ?? '—'} theme · {parsed.pools.leadOpts?.length ?? '—'} lead · {parsed.pools.moodOpts?.length ?? '—'} mood · {instTotal(parsed.pools.instPool)} inst
+                    {parsed.pools.themeOpts?.length ?? '—'} theme · {parsed.pools.leadOpts?.length ?? '—'} lead · {parsed.pools.moodOpts?.length ?? '—'} mood · {instTotal(parsed.pools.instPool)} inst · {parsed.pools.progs?.length ?? '—'} progs
                   </span>
                 </div>
               )}

@@ -1,6 +1,6 @@
 .overlay {
   position: fixed; inset: 0;
-  background: rgba(8,10,15,0.88);
+  background: var(--overlay-bg);
   backdrop-filter: blur(5px);
   z-index: 100;
   display: flex; align-items: center; justify-content: center;
@@ -102,12 +102,12 @@
   padding: 8px 16px; border-radius: 5px;
   cursor: pointer; transition: all 0.14s; border: 1px solid;
 }
-.btnP { background: rgba(108,160,232,0.12); border-color: var(--blue); color: var(--blue); }
-.btnP:hover { background: rgba(108,160,232,0.22); }
+.btnP { background: var(--blue-bg); border-color: var(--blue); color: var(--blue); }
+.btnP:hover { background: var(--blue-bg-hi); }
 .btnG { background: transparent; border-color: var(--border); color: var(--dim); }
 .btnG:hover { color: var(--cream); border-color: var(--border2); }
-.btnDanger { background: rgba(232,122,106,0.1); border-color: var(--rose); color: var(--rose); }
-.btnDanger:hover { background: rgba(232,122,106,0.2); }
+.btnDanger { background: var(--rose-bg); border-color: var(--rose); color: var(--rose); }
+.btnDanger:hover { background: var(--rose-bg-hi); }
 .btnDisabled { opacity: 0.4; cursor: default; pointer-events: none; }
 
 .confirmRow {

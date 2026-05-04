@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { TYPES, CATS, PROGS, PRESETS, DEFAULT_POOLS } from './data';
+import { TYPES, CATS, PRESETS, DEFAULT_POOLS } from './data';
 import GlobalSettings from './components/GlobalSettings';
 import SectionCard from './components/SectionCard';
 import AddSectionModal from './components/AddSectionModal';
@@ -25,6 +25,13 @@ export default function App() {
   const uidRef = useRef(1);
   const toastTimer = useRef(null);
   const isLoadingFromHash = useRef(false);
+
+  const [theme, setTheme] = useState(() => localStorage.getItem('kitsune_theme') ?? 'dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('kitsune_theme', theme);
+  }, [theme]);
 
   const [G, setG] = useState(() => {
     try {
@@ -206,7 +213,7 @@ export default function App() {
       if (s.id !== id) return s;
       return {
         ...s,
-        prog: rand(PROGS).id,
+        prog: rand(pools.progs).id,
         feel: rand(pools.feels),
         inst: {
           lead:    randSubset(ip.lead    || [], 0, 1),
@@ -231,7 +238,7 @@ export default function App() {
 
     setSections(prev => prev.map(s => ({
       ...s,
-      prog: rand(PROGS).id,
+      prog: rand(pools.progs).id,
       feel: rand(pools.feels),
       inst: {
         lead:    randSubset(ip.lead    || [], 0, 1),
@@ -398,6 +405,13 @@ export default function App() {
         >
           ⇅ Settings File
         </button>
+        <button
+          className={styles.themeBtn}
+          onClick={() => setTheme(t => t === 'dark' ? 'light' : 'dark')}
+          title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+        >
+          {theme === 'dark' ? '☀' : '🌙'}
+        </button>
       </div>
 
       <div className={styles.secHead}>
@@ -428,6 +442,7 @@ export default function App() {
             onDuplicate={duplicateSection}
             feels={pools.feels}
             instPool={pools.instPool}
+            progs={pools.progs}
           />
         ))}
       </div>
@@ -437,7 +452,7 @@ export default function App() {
         <div className={styles.addLbl}>Add Section</div>
       </div>
 
-      <OutputBar G={G} sections={sections} onCopy={copyText} exclude={pools.exclude} feelWords={pools.feelWords} />
+      <OutputBar G={G} sections={sections} onCopy={copyText} exclude={pools.exclude} feelWords={pools.feelWords} progs={pools.progs} />
 
       <AddSectionModal
         open={modalOpen}

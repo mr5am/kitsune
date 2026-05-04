@@ -1,10 +1,14 @@
 .instArea { display: flex; flex-direction: column; gap: 9px; }
 
 .catLabel {
-  font-family: var(--font-mono); font-size: 0.52rem;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--dim); margin-bottom: 4px; opacity: 0.7;
+  font-family: var(--font-mono); font-size: 0.56rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--dim) 82%, var(--cream));
+  margin-bottom: 6px;
+  padding-bottom: 3px; border-bottom: 1px solid var(--border);
 }
+
+:global([data-theme="light"]) .catLabel { color: var(--dim); }
 .catChips { display: flex; flex-wrap: wrap; gap: 4px; }
 
 .ic {
@@ -17,9 +21,9 @@
 .ic:hover { border-color: var(--border2); color: var(--cream); }
 
 /* Active states per category */
-.onLead    { border-color: var(--blue);     color: var(--blue);     background: rgba(108,160,232,0.09); }
-.onHarmony { border-color: var(--lavender); color: var(--lavender); background: rgba(168,140,232,0.07); }
-.onRhythm  { border-color: var(--rose);     color: var(--rose);     background: rgba(232,122,106,0.07); }
-.onBass    { border-color: var(--gold2);    color: var(--gold);     background: rgba(232,201,106,0.07); }
-.onTexture { border-color: var(--teal);     color: var(--teal);     background: rgba(94,207,192,0.08);  }
-.onEnergy  { border-color: var(--sage);     color: var(--sage);     background: rgba(122,191,144,0.07); }
+.onLead    { border-color: var(--blue);     color: var(--blue);     background: var(--blue-bg);     }
+.onHarmony { border-color: var(--lavender); color: var(--lavender); background: var(--lavender-bg); }
+.onRhythm  { border-color: var(--rose);     color: var(--rose);     background: var(--rose-bg);     }
+.onBass    { border-color: var(--gold2);    color: var(--gold);     background: var(--gold-bg);     }
+.onTexture { border-color: var(--teal);     color: var(--teal);     background: var(--teal-bg);     }
+.onEnergy  { border-color: var(--sage);     color: var(--sage);     background: var(--sage-bg);     }

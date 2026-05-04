@@ -1,6 +1,6 @@
 .overlay {
   position: fixed; inset: 0;
-  background: rgba(8,10,15,0.88);
+  background: var(--overlay-bg);
   backdrop-filter: blur(5px);
   z-index: 100;
   display: flex; align-items: center; justify-content: center;
@@ -72,9 +72,9 @@
 }
 .presetCard:hover { border-color: var(--border2); }
 .presetCard:hover .deleteBtn { opacity: 1; }
-.selected { border-color: var(--blue); background: rgba(108,160,232,0.06); }
+.selected { border-color: var(--blue); background: var(--blue-bg); }
 .activeCard { border-color: var(--gold2); }
-.activeCard.selected { border-color: var(--gold); background: rgba(232,201,106,0.06); }
+.activeCard.selected { border-color: var(--gold); background: var(--gold-bg); }
 
 /* Delete button — shown on hover */
 .deleteBtn {
@@ -86,15 +86,15 @@
   display: flex; align-items: center; justify-content: center;
   border-radius: 3px; line-height: 1;
 }
-.deleteBtn:hover { color: var(--rose); background: rgba(232,122,106,0.12); opacity: 1; }
+.deleteBtn:hover { color: var(--rose); background: var(--rose-bg); opacity: 1; }
 
 /* Active badge */
 .activeBadge {
   display: inline-block; margin-bottom: 5px;
   font-family: var(--font-mono); font-size: 0.48rem;
   letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--gold2); background: rgba(232,201,106,0.1);
-  border: 1px solid rgba(232,201,106,0.25); border-radius: 3px;
+  color: var(--gold2); background: var(--gold-bg);
+  border: 1px solid var(--gold-bg-hi); border-radius: 3px;
   padding: 1px 5px;
 }
 
@@ -145,12 +145,12 @@
   padding: 8px 16px; border-radius: 5px;
   cursor: pointer; transition: all 0.14s; border: 1px solid;
 }
-.btnP { background: rgba(108,160,232,0.12); border-color: var(--blue); color: var(--blue); }
-.btnP:hover { background: rgba(108,160,232,0.22); }
+.btnP { background: var(--blue-bg); border-color: var(--blue); color: var(--blue); }
+.btnP:hover { background: var(--blue-bg-hi); }
 .btnG { background: transparent; border-color: var(--border); color: var(--dim); }
 .btnG:hover { color: var(--cream); border-color: var(--border2); }
-.btnDanger { background: rgba(232,122,106,0.1); border-color: var(--rose); color: var(--rose); }
-.btnDanger:hover { background: rgba(232,122,106,0.2); }
+.btnDanger { background: var(--rose-bg); border-color: var(--rose); color: var(--rose); }
+.btnDanger:hover { background: var(--rose-bg-hi); }
 .btnDisabled { opacity: 0.4; cursor: default; pointer-events: none; }
 
 @media (max-width: 680px) {

@@ -1,6 +1,6 @@
 # TODOS — Kitsune
 
-Deferred work from sprint reviews. Pick up when friction warrants it.
+Planned features, deferred until the pain is real. Pick up when friction warrants it.
 
 ---
 
@@ -20,8 +20,7 @@ has this because none have the section structure to drive it.
 voicings that erode trust. Reference audio clips require curation. Expert music theory
 input needed before implementation.
 
-**Context:** Discussed in CEO review (2026-05-03). Tone.js was identified as one
-mechanism, not the only one. Other candidates: royalty-free reference clips per
+**Context:** Tone.js is one candidate mechanism. Other options: royalty-free reference clips per
 progression, curated Suno output examples, expert-authored sound descriptions. Needs
 domain expert consultation before scoping.
 
@@ -44,8 +43,7 @@ Chorus instances with slight variations). Currently requires full manual rebuild
 
 **Cons:** Minor — arrow reordering already works. Not daily pain yet.
 
-**Context:** Deferred in CEO review (2026-05-03). Revisit when section count regularly
-hits 6+ and reuse becomes a pattern.
+**Context:** Revisit when section count regularly hits 6+ and reuse becomes a pattern.
 
 **Effort:** S (human 30 min) / S (CC 5 min). No new dependencies.
 
@@ -83,7 +81,6 @@ context. Claude API is highest quality but requires a backend or user-supplied k
 
 **Cons:** Adds one npm dependency. Arrow pain only emerges at 6+ sections.
 
-**Context:** Deferred in CEO review (2026-05-03). Revisit when tracks regularly exceed
-6 sections and arrow navigation becomes friction.
+**Context:** Revisit when tracks regularly exceed 6 sections and arrow navigation becomes friction.
 
 **Effort:** M (human 2 hrs) / S (CC 20 min). Requires @dnd-kit/core.

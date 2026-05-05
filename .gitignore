@@ -34,6 +34,7 @@ pnpm-debug.log*
 .cache/
 .vite/
 
-# Claude
+# Claude / AI tooling
 .claude/
 .gstack/
+CLAUDE.md

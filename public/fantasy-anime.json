@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "settings": {
+    "theme": "cinematic orchestral fantasy anime, epic sweeping adventure",
+    "lead": "solo violin lead",
+    "mood": "epic triumphant"
+  },
+  "pools": {
+    "themeOpts": [
+      { "v": "cinematic orchestral fantasy anime, epic sweeping adventure",        "label": "Epic Adventure" },
+      { "v": "dark dungeon crawler anime score, menacing orchestral tension",      "label": "Dark Dungeon" },
+      { "v": "mystical forest anime OST, ethereal strings and woodwinds",          "label": "Mystic Forest" },
+      { "v": "ancient kingdom anime theme, majestic brass and strings",            "label": "Ancient Kingdom" },
+      { "v": "battle quest anime score, driving orchestral action",                "label": "Battle Quest" },
+      { "v": "pastoral light fantasy anime OST, gentle magic and wonder",          "label": "Pastoral Wonder" }
+    ],
+    "leadOpts": [
+      { "v": "solo violin lead",        "label": "Violin" },
+      { "v": "solo flute lead",         "label": "Flute" },
+      { "v": "solo cello lead",         "label": "Cello" },
+      { "v": "warm harp lead",          "label": "Harp" },
+      { "v": "recorder melody lead",    "label": "Recorder" },
+      { "v": "operatic choir lead",     "label": "Choir" }
+    ],
+    "moodOpts": [
+      { "v": "epic triumphant",  "label": "Epic" },
+      { "v": "dark mysterious",  "label": "Mysterious" },
+      { "v": "battle fierce",    "label": "Battle" },
+      { "v": "pastoral wonder",  "label": "Pastoral" }
+    ],
+    "instPool": {
+      "lead":    ["soaring violin line", "flute ornament", "solo cello phrase", "harp arpeggios", "recorder melody", "operatic choir phrase", "piano accent line", "viola phrase", "sul ponticello violin"],
+      "harmony": ["lush orchestral strings", "string arpeggios", "slow string pads", "organ wash", "harp arpeggios", "tremolo strings", "operatic synth choir", "ambient breath pads", "open fifth string cluster", "pizzicato strings"],
+      "rhythm":  ["orchestral percussion hits", "half-time feel", "brushed snare", "driving rock drums", "punched snare", "soft claps", "four-on-floor kick"],
+      "bass":    ["contrabass pedal drone", "deep low rumble", "walking bass", "pizzicato bass", "upright bass feel", "warm sub bass"],
+      "texture": ["cathedral reverb wash", "warm room reverb", "reverse swells", "golden shimmer", "tape hiss", "subtle noise floor"],
+      "energy":  ["orchestral swell", "dramatic build", "tension riser", "explosive release", "haunting suspension", "airy lift", "warm golden fade", "soft morning light feel"]
+    },
+    "feels": ["epic", "mysterious", "gentle", "fierce", "wonder"],
+    "feelWords": {
+      "epic":       "grand",
+      "mysterious": "shadowed",
+      "gentle":     "tender",
+      "fierce":     "blazing",
+      "wonder":     "awed"
+    },
+    "exclude": "lofi, vinyl crackle, tape hiss, drum machines, electric guitar, distortion, trap, 8-bit, chiptune, industrial, bass drop, dubstep, lo-fi hip hop, electronic synth pop, modern pop, city pop, bedroom pop, lazy shuffled drums",
+    "progs": [
+      { "id": "royal-road",    "name": "Hero's Lift",       "sunoStyle": "warm yearning chord lift and settle, a hero's heart swelling with hope, bittersweet rise into light",                                          "lyricTag": "heroic yearning lift",          "desc": "Warm lift and settle · a hero's heart swelling",       "feel": "wonder",     "reference": "SAO OST / fantasy anime OP" },
+      { "id": "flat-six",      "name": "Shadow Cadence",    "sunoStyle": "dark minor chord falling into melancholic resolution, a shadow over the realm, wounded orchestral grandeur",                                   "lyricTag": "dark orchestral cadence",       "desc": "Heavy dark chord falling · shadow over the realm",     "feel": "mysterious", "reference": "Made in Abyss / Violet Evergarden OST" },
+      { "id": "phrygian",      "name": "Ancient Darkness",  "sunoStyle": "ancient Phrygian modal shadow, unresolved tension, a forgotten evil at the edge of the map, medieval dread",                                  "lyricTag": "ancient dark modal shadow",     "desc": "Ancient unresolved darkness · brooding Phrygian",      "feel": "mysterious", "reference": "Made in Abyss / SAO Alicization OST" },
+      { "id": "neapolitan",    "name": "Grand Arrival",     "sunoStyle": "half-step surprise chord before the grand gates open, sudden tension then triumphant classical resolution, the kingdom revealed",              "lyricTag": "grand royal arrival",           "desc": "Surprise chord before the grand arrival · triumph",    "feel": "epic",       "reference": "Re:Zero / Overlord final battle" },
+      { "id": "canon",         "name": "Village Canon",     "sunoStyle": "gentle cascading chords, warmth unfolding at dawn, a village market scene, pastoral forward motion, tender and familiar",                     "lyricTag": "pastoral cascading warmth",     "desc": "Tender cascading warmth · a village at dawn",          "feel": "gentle",     "reference": "Sword Art Online village / Clannad OST" },
+      { "id": "dorian",        "name": "Wanderer's Arc",    "sunoStyle": "minor key lifted by a raised sixth, the bittersweet mode of the lone adventurer, sadness refusing to be dark",                               "lyricTag": "wanderer Dorian arc",           "desc": "Minor with a raised sixth · the wanderer refusing dark","feel": "wonder",     "reference": "Nier Automata / Ancient Magus Bride OST" },
+      { "id": "black-adder",   "name": "Dragon Stab",       "sunoStyle": "sudden jarring chord stab, a dragon's shadow over the keep, maximum dramatic tension, one hit that changes everything",                       "lyricTag": "dramatic dragon stab",          "desc": "One jarring chord · the dragon's shadow arrives",      "feel": "fierce",     "reference": "DanMachi / Goblin Slayer OST" },
+      { "id": "nat-minor",     "name": "Dark Realm",        "sunoStyle": "heavy aeolian minor chords falling in sequence, the realm in shadow, slow dark pull downward, a kingdom under siege",                         "lyricTag": "aeolian realm in shadow",       "desc": "Heavier aeolian fall · the realm in shadow",           "feel": "mysterious", "reference": "Re:Zero curse arc / Overlord dark OST" },
+      { "id": "axis",          "name": "Adventurer's Rest", "sunoStyle": "bittersweet circular chord loop, the adventurer's quiet moment at the inn, minor opening into warm settling, a breath before the next arc",   "lyricTag": "bittersweet adventurer rest",   "desc": "The quiet loop · bittersweet rest before the road",    "feel": "gentle",     "reference": "Log Horizon town theme / SAO quiet OST" },
+      { "id": "andalusian",    "name": "Ancient Descent",   "sunoStyle": "chords stepping steadily downward, ancient stone beneath crumbling, the old world sinking beneath the hero's feet, brooding descent",         "lyricTag": "ancient descending steps",      "desc": "Steady descent · the old world crumbling beneath",     "feel": "mysterious", "reference": "Made in Abyss Abyss descent / Re:Zero" },
+      { "id": "secondary-dom", "name": "Harmonic Twist",    "sunoStyle": "unexpected harmonic pull toward resolution, the twist before the hero's revelation, sudden emotional chord colour",                            "lyricTag": "heroic harmonic revelation",    "desc": "Unexpected chord tug · the twist before revelation",   "feel": "wonder",     "reference": "SAO / fantasy anime plot twist scene" },
+      { "id": "yonezu",        "name": "Bright Ascension",  "sunoStyle": "unexpected bright major chord leap from dark verse, the hero's sudden power awakening, euphoric pop-orchestral arrival",                      "lyricTag": "heroic bright ascension",       "desc": "Dark moment snaps into a bright heroic ascension",     "feel": "epic",       "reference": "modern anime fantasy OP chorus" },
+      { "id": "pedal-void",    "name": "Ruin Pedal",        "sunoStyle": "held bass drone anchoring forgotten ground, shifting chords floating above like spirits, ancient desolation, time standing still in ruins",   "lyricTag": "ancient ruin pedal suspension", "desc": "Bass holds still · forgotten ruins, drifting spirits", "feel": "mysterious", "reference": "Made in Abyss ruins / Ancient Magus Bride" },
+      { "id": "chromatic-sink","name": "Abyss Descent",     "sunoStyle": "chromatic half-step bass descent, ancient ruins crumbling, ground eroding beneath the traveller, irreversible dark downward pull",            "lyricTag": "abyss chromatic descent",       "desc": "Ground falls away · half-step descent into the abyss", "feel": "mysterious", "reference": "Made in Abyss descent / Nier ruins" },
+      { "id": "minor-plagal",  "name": "Wound Healing",     "sunoStyle": "minor chord sighing into major, the dark-to-light exhale, a wound beginning to heal, the battle over and warmth returning",                  "lyricTag": "dark-to-light healing sigh",    "desc": "One dark chord exhaling into warmth · healing begins", "feel": "gentle",     "reference": "Violet Evergarden / fantasy healing arc" },
+      { "id": "modulation",    "name": "World Shift",       "sunoStyle": "key centre shifting upward as the world transforms, scene colour changing under shifting magic, tonal landscape reborn",                      "lyricTag": "world transformation shift",    "desc": "The key shifts · the world transforms under magic",    "feel": "wonder",     "reference": "SAO world shift / fantasy transformation" }
+    ]
+  },
+  "presets": [
+    {
+      "id": "fantasy-ancient-kingdom",
+      "name": "Ancient Kingdom",
+      "artist": "Re:Zero / Overlord",
+      "desc": "Majestic royal march — strings-and-drums theme, harmonic twist develop, full choir Neapolitan payoff",
+      "bpm": "96",
+      "theme": "ancient kingdom anime theme, majestic brass and strings",
+      "lead": "solo violin lead",
+      "mood": "epic triumphant",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "royal-road",   "feel": "epic",      "endingType": null,       "inst": { "lead": [],                                     "harmony": ["string arpeggios", "slow string pads"],                   "rhythm": [],                                         "bass": ["contrabass pedal drone"], "texture": ["cathedral reverb wash"],       "energy": ["soft morning light feel"] } },
+        { "typeId": "theme",   "prog": "canon",        "feel": "epic",      "endingType": null,       "inst": { "lead": ["soaring violin line"],                 "harmony": ["lush orchestral strings", "string arpeggios"],            "rhythm": ["orchestral percussion hits", "brushed snare"], "bass": ["walking bass"],           "texture": [],                              "energy": ["orchestral swell"] } },
+        { "typeId": "develop", "prog": "secondary-dom","feel": "fierce",    "endingType": null,       "inst": { "lead": ["piano accent line"],                   "harmony": ["tremolo strings", "lush orchestral strings"],             "rhythm": ["punched snare"],                           "bass": ["deep low rumble"],        "texture": ["reverse swells"],              "energy": ["tension riser", "dramatic build"] } },
+        { "typeId": "chorus",  "prog": "neapolitan",   "feel": "epic",      "endingType": null,       "inst": { "lead": ["soaring violin line", "operatic choir phrase"], "harmony": ["lush orchestral strings", "operatic synth choir"], "rhythm": ["orchestral percussion hits", "four-on-floor kick"], "bass": ["contrabass pedal drone"], "texture": ["golden shimmer"],       "energy": ["orchestral swell", "explosive release"] } },
+        { "typeId": "outro",   "prog": "royal-road",   "feel": "gentle",    "endingType": "rit-fade", "inst": { "lead": ["viola phrase"],                        "harmony": ["slow string pads", "string arpeggios"],                   "rhythm": [],                                         "bass": ["pizzicato bass"],         "texture": ["cathedral reverb wash"],       "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "fantasy-dark-dungeon",
+      "name": "Dark Dungeon",
+      "artist": "Made in Abyss / Goblin Slayer",
+      "desc": "Phrygian descent into terror — cello stalks through Andalusian gloom, flat-six eruption, cold silence",
+      "bpm": "108",
+      "theme": "dark dungeon crawler anime score, menacing orchestral tension",
+      "lead": "solo cello lead",
+      "mood": "dark mysterious",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",  "prog": "phrygian",    "feel": "mysterious", "endingType": null,   "inst": { "lead": [],                   "harmony": ["ambient breath pads", "slow string pads"],          "rhythm": [],                                 "bass": ["contrabass pedal drone"], "texture": ["subtle noise floor", "cathedral reverb wash"], "energy": [] } },
+        { "typeId": "verse",  "prog": "andalusian",  "feel": "mysterious", "endingType": null,   "inst": { "lead": ["solo cello phrase"], "harmony": ["tremolo strings", "open fifth string cluster"],      "rhythm": ["half-time feel"],                  "bass": ["deep low rumble"],        "texture": [],                                             "energy": ["haunting suspension"] } },
+        { "typeId": "chorus", "prog": "flat-six",    "feel": "fierce",     "endingType": null,   "inst": { "lead": ["soaring violin line"], "harmony": ["lush orchestral strings", "organ wash"],          "rhythm": ["orchestral percussion hits", "punched snare"], "bass": ["contrabass pedal drone"], "texture": ["reverse swells"],              "energy": ["dramatic build", "explosive release"] } },
+        { "typeId": "outro",  "prog": "phrygian",    "feel": "mysterious", "endingType": "cold", "inst": { "lead": [],                   "harmony": ["ambient breath pads"],                               "rhythm": [],                                 "bass": ["contrabass pedal drone"], "texture": ["cathedral reverb wash", "subtle noise floor"],  "energy": [] } }
+      ]
+    },
+    {
+      "id": "fantasy-forest-spirit",
+      "name": "Forest Spirit",
+      "artist": "Princess Mononoke / Ancient Magus Bride",
+      "desc": "Flute and harp through dappled light — Dorian wonder, gentle Canon chorus swell, ambient dissolve",
+      "bpm": "76",
+      "theme": "mystical forest anime OST, ethereal strings and woodwinds",
+      "lead": "solo flute lead",
+      "mood": "pastoral wonder",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",  "prog": "royal-road", "feel": "gentle", "endingType": null,       "inst": { "lead": [],                              "harmony": ["string arpeggios", "harp arpeggios"],             "rhythm": [],              "bass": [],               "texture": ["warm room reverb"],                "energy": ["soft morning light feel"] } },
+        { "typeId": "theme",  "prog": "dorian",     "feel": "wonder", "endingType": null,       "inst": { "lead": ["flute ornament"],               "harmony": ["pizzicato strings", "string arpeggios"],          "rhythm": ["brushed snare"], "bass": ["upright bass feel"], "texture": [],                             "energy": ["airy lift"] } },
+        { "typeId": "chorus", "prog": "canon",      "feel": "wonder", "endingType": null,       "inst": { "lead": ["flute ornament", "soaring violin line"], "harmony": ["lush orchestral strings", "harp arpeggios"], "rhythm": ["soft claps"],   "bass": ["walking bass"],      "texture": ["golden shimmer"],              "energy": ["orchestral swell", "airy lift"] } },
+        { "typeId": "outro",  "prog": "royal-road", "feel": "gentle", "endingType": "dissolve", "inst": { "lead": ["flute ornament"],               "harmony": ["slow string pads", "harp arpeggios"],             "rhythm": [],              "bass": [],               "texture": ["warm room reverb", "tape hiss"],    "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "fantasy-dragons-lair",
+      "name": "Dragon's Lair",
+      "artist": "DanMachi / SAO Battle",
+      "desc": "Dragon chord stab, Andalusian pursuit, full orchestra Neapolitan climax, cold cut",
+      "bpm": "140",
+      "theme": "battle quest anime score, driving orchestral action",
+      "lead": "solo violin lead",
+      "mood": "battle fierce",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",  "prog": "black-adder", "feel": "fierce", "endingType": null,   "inst": { "lead": [],                              "harmony": ["tremolo strings", "open fifth string cluster"],   "rhythm": ["orchestral percussion hits"],                     "bass": ["deep low rumble"],        "texture": ["reverse swells"],    "energy": ["dramatic build"] } },
+        { "typeId": "theme",  "prog": "andalusian",  "feel": "fierce", "endingType": null,   "inst": { "lead": ["soaring violin line"],          "harmony": ["lush orchestral strings"],                        "rhythm": ["driving rock drums", "orchestral percussion hits"], "bass": ["deep low rumble"],        "texture": [],                    "energy": ["tension riser"] } },
+        { "typeId": "chorus", "prog": "neapolitan",  "feel": "epic",   "endingType": null,   "inst": { "lead": ["soaring violin line", "operatic choir phrase"], "harmony": ["lush orchestral strings", "operatic synth choir"], "rhythm": ["driving rock drums", "orchestral percussion hits"], "bass": ["contrabass pedal drone"], "texture": ["golden shimmer"], "energy": ["explosive release", "orchestral swell"] } },
+        { "typeId": "outro",  "prog": "flat-six",    "feel": "fierce", "endingType": "cold", "inst": { "lead": [],                              "harmony": ["tremolo strings", "lush orchestral strings"],     "rhythm": ["orchestral percussion hits"],                     "bass": ["contrabass pedal drone"], "texture": ["reverse swells"],    "energy": ["dramatic build"] } }
+      ]
+    },
+    {
+      "id": "fantasy-heros-journey",
+      "name": "Hero's Journey",
+      "artist": "SAO / Log Horizon",
+      "desc": "Wonder-filled intro, recorder verse, tension pre-chorus, soaring violin and choir at the payoff",
+      "bpm": "118",
+      "theme": "cinematic orchestral fantasy anime, epic sweeping adventure",
+      "lead": "solo violin lead",
+      "mood": "epic triumphant",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",    "prog": "royal-road",   "feel": "wonder",  "endingType": null,   "inst": { "lead": ["piano accent line"],  "harmony": ["string arpeggios", "slow string pads"],               "rhythm": [],              "bass": [],                 "texture": ["golden shimmer"],           "energy": ["soft morning light feel"] } },
+        { "typeId": "verse",    "prog": "axis",         "feel": "gentle",  "endingType": null,   "inst": { "lead": ["recorder melody"],    "harmony": ["pizzicato strings", "string arpeggios"],              "rhythm": ["brushed snare"], "bass": ["walking bass"],    "texture": [],                           "energy": [] } },
+        { "typeId": "prechorus","prog": "secondary-dom","feel": "fierce",  "endingType": null,   "inst": { "lead": [],                    "harmony": ["tremolo strings"],                                     "rhythm": ["punched snare"], "bass": ["deep low rumble"], "texture": ["reverse swells"],           "energy": ["tension riser"] } },
+        { "typeId": "chorus",   "prog": "yonezu",       "feel": "epic",    "endingType": null,   "inst": { "lead": ["soaring violin line"], "harmony": ["lush orchestral strings", "operatic synth choir"],  "rhythm": ["four-on-floor kick", "orchestral percussion hits"], "bass": ["contrabass pedal drone"], "texture": ["golden shimmer"], "energy": ["orchestral swell", "explosive release"] } },
+        { "typeId": "outro",    "prog": "royal-road",   "feel": "wonder",  "endingType": "fade", "inst": { "lead": ["flute ornament"],     "harmony": ["slow string pads", "string arpeggios"],               "rhythm": [],              "bass": ["pizzicato bass"],  "texture": ["cathedral reverb wash"],    "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "fantasy-forgotten-ruins",
+      "name": "Forgotten Ruins",
+      "artist": "Made in Abyss / Ancient Magus Bride",
+      "desc": "Cello over drone pedal — Dorian verse, chromatic abyss descent, dark chorus eruption, spirit dissolve",
+      "bpm": "84",
+      "theme": "dark dungeon crawler anime score, menacing orchestral tension",
+      "lead": "solo cello lead",
+      "mood": "dark mysterious",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "pedal-void",     "feel": "mysterious", "endingType": null,       "inst": { "lead": [],                  "harmony": ["ambient breath pads", "open fifth string cluster"], "rhythm": [],                               "bass": ["contrabass pedal drone"], "texture": ["cathedral reverb wash"],               "energy": [] } },
+        { "typeId": "verse",   "prog": "dorian",         "feel": "mysterious", "endingType": null,       "inst": { "lead": ["solo cello phrase"], "harmony": ["slow string pads", "harp arpeggios"],             "rhythm": ["half-time feel"],                "bass": ["walking bass"],           "texture": ["subtle noise floor"],                  "energy": ["haunting suspension"] } },
+        { "typeId": "develop", "prog": "chromatic-sink", "feel": "mysterious", "endingType": null,       "inst": { "lead": ["viola phrase"],     "harmony": ["tremolo strings", "open fifth string cluster"],    "rhythm": ["orchestral percussion hits"],    "bass": ["contrabass pedal drone"], "texture": ["reverse swells"],                      "energy": ["dramatic build", "tension riser"] } },
+        { "typeId": "chorus",  "prog": "flat-six",       "feel": "fierce",     "endingType": null,       "inst": { "lead": ["soaring violin line"], "harmony": ["lush orchestral strings", "organ wash"],         "rhythm": ["orchestral percussion hits", "punched snare"], "bass": ["contrabass pedal drone"], "texture": [],                             "energy": ["explosive release", "orchestral swell"] } },
+        { "typeId": "outro",   "prog": "pedal-void",     "feel": "mysterious", "endingType": "dissolve", "inst": { "lead": [],                  "harmony": ["ambient breath pads", "slow string pads"],          "rhythm": [],                               "bass": ["contrabass pedal drone"], "texture": ["cathedral reverb wash", "subtle noise floor"], "energy": ["haunting suspension"] } }
+      ]
+    }
+  ]
+}

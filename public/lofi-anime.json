@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "settings": {
+    "theme": "lofi hip hop anime chill beat, hazy late-night study vibes",
+    "lead": "sparse solo piano lead",
+    "mood": "nostalgic hazy"
+  },
+  "pools": {
+    "themeOpts": [
+      { "v": "lofi hip hop anime chill beat, hazy late-night study vibes",  "label": "Lo-fi Hip Hop" },
+      { "v": "Japanese bedroom pop lo-fi, warm nostalgic memory",           "label": "Bedroom Pop" },
+      { "v": "lo-fi ambient anime score, slow drifting haze",               "label": "Ambient Drift" },
+      { "v": "downtempo indie anime lo-fi, bittersweet warmth",             "label": "Downtempo Indie" },
+      { "v": "late night city lo-fi, rain and neon glow",                   "label": "Night City" },
+      { "v": "slow anime piano lo-fi, quiet reflective mood",               "label": "Piano Reflective" }
+    ],
+    "leadOpts": [
+      { "v": "sparse solo piano lead",        "label": "Sparse Piano" },
+      { "v": "warm nylon string guitar lead", "label": "Nylon Guitar" },
+      { "v": "mellow electric piano lead",    "label": "E. Piano" },
+      { "v": "soft vibraphone lead",          "label": "Vibraphone" },
+      { "v": "breathy flute lead",            "label": "Flute" },
+      { "v": "lo-fi guitar fingerpick lead",  "label": "Fingerpick Guitar" }
+    ],
+    "moodOpts": [
+      { "v": "nostalgic hazy",    "label": "Nostalgic" },
+      { "v": "cozy rainy day",    "label": "Cozy" },
+      { "v": "bittersweet dusk",  "label": "Bittersweet" },
+      { "v": "sleepy melancholy", "label": "Sleepy" }
+    ],
+    "instPool": {
+      "lead":    ["sparse solo piano", "nylon string melody", "piano accent line", "soft vibraphone", "breathy flute phrase", "electric piano accent", "flute ornament", "warm upright piano"],
+      "harmony": ["warm synth pads", "slow string pads", "string arpeggios", "harp arpeggios", "pizzicato strings", "ambient breath pads", "open fifth string cluster"],
+      "rhythm":  ["lazy shuffled drums", "brushed snare", "soft claps", "half-time feel", "dusty vintage drums", "lo-fi drum loop"],
+      "bass":    ["warm sub bass", "upright bass feel", "walking bass", "pizzicato bass", "soft dubstep sub"],
+      "texture": ["vinyl crackle", "tape hiss", "warm room reverb", "subtle noise floor", "golden shimmer", "reverse swells"],
+      "energy":  ["soft morning light feel", "gentle energy lift", "warm golden fade", "airy lift", "haunting suspension"]
+    },
+    "feels": ["hazy", "cozy", "drifting", "bittersweet", "still"],
+    "feelWords": {
+      "hazy":        "misty",
+      "cozy":        "warm",
+      "drifting":    "floating",
+      "bittersweet": "tender",
+      "still":       "quiet"
+    },
+    "exclude": "loud drums, punched snare, driving rock drums, overdriven electric guitar, heavy distortion, orchestral swell, explosive release, industrial, harsh noise, metal, trap, 8-bit, chiptune, heavy bass drop, dubstep, four-on-floor kick, bright synth pop, electronic EDM",
+    "progs": [
+      { "id": "royal-road",   "name": "Hazy Lift",     "sunoStyle": "soft bittersweet chord lift and settle, a gentle ache, lazy afternoon haze, sunlight through curtains",                             "lyricTag": "hazy bittersweet lift",       "desc": "Gentle lift and settle · lazy afternoon warmth",     "feel": "bittersweet", "reference": "AnoHana ED / lofi study beats" },
+      { "id": "line-cliche",  "name": "Still Shimmer", "sunoStyle": "slow inner voice creeping upward inside still chords, quiet shimmer underneath, lo-fi introspection with no hurry",                "lyricTag": "slow inner shimmer",          "desc": "Still surface hiding a slow inner voice",            "feel": "still",       "reference": "Mushishi OST / lofi ambient" },
+      { "id": "dorian",       "name": "Dorian Glow",   "sunoStyle": "minor key lifting into warmth, the lo-fi Dorian glow, sad but not hopeless, late light before dark falls",                         "lyricTag": "lo-fi Dorian warmth",         "desc": "Minor sadness lifting into a warm Dorian glow",      "feel": "bittersweet", "reference": "Aria OST / late afternoon lo-fi" },
+      { "id": "pedal-void",   "name": "Still Pedal",   "sunoStyle": "bass holds perfectly still, chords drift above like dust motes in afternoon light, time suspended in lo-fi haze",                  "lyricTag": "suspended lo-fi stillness",   "desc": "Bass holds still · drifting chords like dust",       "feel": "still",       "reference": "lo-fi ambient anime / study beats" },
+      { "id": "axis",         "name": "Hazy Axis",     "sunoStyle": "gentle circular chord loop, bittersweet J-pop memory, hazy afternoon going nowhere, the loop that never resolves",                 "lyricTag": "hazy bittersweet loop",       "desc": "The gentle loop · bittersweet and circular",         "feel": "bittersweet", "reference": "K-On ED / lo-fi study playlist" },
+      { "id": "canon",        "name": "Lazy Canon",    "sunoStyle": "tender cascading chord sequence, warm familiar forward motion, lazy tumbling warmth, the lo-fi morning unfolding",                 "lyricTag": "warm tender cascade",         "desc": "Tender cascading warmth · lazy forward motion",      "feel": "cozy",        "reference": "Clannad OST / lofi morning vibes" },
+      { "id": "minor-plagal", "name": "Lo-fi Sigh",    "sunoStyle": "minor chord breathing slowly into major, a quiet exhale, the lo-fi sigh, dark-to-warm release in slow motion",                    "lyricTag": "quiet dark-to-warm sigh",     "desc": "One dark chord breathing into warmth",               "feel": "bittersweet", "reference": "March Comes in Like a Lion OST" },
+      { "id": "nat-minor",    "name": "Soft Descent",  "sunoStyle": "minor chords falling softly in sequence, aeolian sadness made gentle, slow melancholy without heaviness, a quiet grey afternoon",  "lyricTag": "soft aeolian fall",           "desc": "Soft aeolian sadness · quiet grey melancholy",        "feel": "hazy",        "reference": "Your Name OST / nostalgic lo-fi" }
+    ]
+  },
+  "presets": [
+    {
+      "id": "lofi-late-night-rain",
+      "name": "Late Night Rain",
+      "artist": "Mushishi / Lofi Ambient",
+      "desc": "Sparse piano over vinyl hiss — Dorian sadness drifting into warmth, rain on glass, lo-fi stillness",
+      "bpm": "72",
+      "theme": "lo-fi ambient anime score, slow drifting haze",
+      "lead": "sparse solo piano lead",
+      "mood": "nostalgic hazy",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "line-cliche", "feel": "still",       "endingType": null,      "inst": { "lead": [],                "harmony": ["ambient breath pads"],                             "rhythm": [],                    "bass": ["upright bass feel"], "texture": ["vinyl crackle", "tape hiss"],         "energy": [] } },
+        { "typeId": "verse",   "prog": "dorian",      "feel": "hazy",        "endingType": null,      "inst": { "lead": ["sparse solo piano"], "harmony": ["slow string pads", "harp arpeggios"],          "rhythm": ["lazy shuffled drums"], "bass": ["warm sub bass"],     "texture": ["tape hiss"],                         "energy": [] } },
+        { "typeId": "develop", "prog": "minor-plagal","feel": "bittersweet", "endingType": null,      "inst": { "lead": ["piano accent line"], "harmony": ["string arpeggios", "slow string pads"],        "rhythm": ["brushed snare"],       "bass": ["warm sub bass"],     "texture": [],                                    "energy": ["gentle energy lift"] } },
+        { "typeId": "outro",   "prog": "pedal-void",  "feel": "still",       "endingType": "fade",    "inst": { "lead": [],                "harmony": ["ambient breath pads"],                             "rhythm": [],                    "bass": ["upright bass feel"], "texture": ["vinyl crackle", "warm room reverb"], "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "lofi-rooftop-reverie",
+      "name": "Rooftop Reverie",
+      "artist": "K-On / Bedroom Pop",
+      "desc": "Nylon guitar daydream — bittersweet Axis loop, flute shimmer on the chorus, afternoon warmth",
+      "bpm": "80",
+      "theme": "Japanese bedroom pop lo-fi, warm nostalgic memory",
+      "lead": "warm nylon string guitar lead",
+      "mood": "nostalgic hazy",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",  "prog": "royal-road", "feel": "cozy",       "endingType": null,       "inst": { "lead": [],                               "harmony": ["string arpeggios"],                            "rhythm": [],              "bass": [],               "texture": ["vinyl crackle"],                     "energy": ["soft morning light feel"] } },
+        { "typeId": "verse",  "prog": "axis",       "feel": "cozy",       "endingType": null,       "inst": { "lead": ["nylon string melody"],           "harmony": ["string arpeggios", "warm synth pads"],         "rhythm": ["brushed snare"], "bass": ["walking bass"],  "texture": [],                                   "energy": [] } },
+        { "typeId": "chorus", "prog": "canon",      "feel": "bittersweet","endingType": null,       "inst": { "lead": ["nylon string melody", "flute ornament"], "harmony": ["pizzicato strings", "string arpeggios"], "rhythm": ["soft claps"],   "bass": ["warm sub bass"], "texture": ["golden shimmer"],                   "energy": ["airy lift"] } },
+        { "typeId": "outro",  "prog": "axis",       "feel": "cozy",       "endingType": "dissolve", "inst": { "lead": [],                               "harmony": ["slow string pads"],                            "rhythm": [],              "bass": [],               "texture": ["tape hiss", "warm room reverb"],     "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "lofi-sleepy-town",
+      "name": "Sleepy Town",
+      "artist": "Non Non Biyori / Lofi Ambient",
+      "desc": "Vibraphone drifting over harp — still pedal intro, Dorian glow, lazy drums, gentle dissolve",
+      "bpm": "65",
+      "theme": "lofi hip hop anime chill beat, hazy late-night study vibes",
+      "lead": "soft vibraphone lead",
+      "mood": "cozy rainy day",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",  "prog": "pedal-void", "feel": "still", "endingType": null,   "inst": { "lead": [],                              "harmony": ["ambient breath pads", "open fifth string cluster"], "rhythm": [],                    "bass": ["upright bass feel"], "texture": ["vinyl crackle", "subtle noise floor"], "energy": [] } },
+        { "typeId": "theme",  "prog": "dorian",     "feel": "cozy",  "endingType": null,   "inst": { "lead": ["soft vibraphone"],             "harmony": ["harp arpeggios", "warm synth pads"],                "rhythm": ["lazy shuffled drums"], "bass": ["pizzicato bass"],    "texture": [],                                     "energy": [] } },
+        { "typeId": "chorus", "prog": "canon",      "feel": "cozy",  "endingType": null,   "inst": { "lead": ["soft vibraphone", "flute ornament"], "harmony": ["string arpeggios", "slow string pads"],      "rhythm": ["soft claps"],          "bass": ["upright bass feel"], "texture": ["golden shimmer"],                      "energy": ["airy lift"] } },
+        { "typeId": "outro",  "prog": "dorian",     "feel": "still", "endingType": "fade", "inst": { "lead": [],                              "harmony": ["harp arpeggios", "ambient breath pads"],            "rhythm": [],                    "bass": ["upright bass feel"], "texture": ["vinyl crackle", "tape hiss"],           "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "lofi-study-dusk",
+      "name": "Study Dusk",
+      "artist": "Anime Study Beats",
+      "desc": "Electric piano over dusty drums — Canon warmth through the verse, Axis settle, gentle fade to dusk",
+      "bpm": "85",
+      "theme": "downtempo indie anime lo-fi, bittersweet warmth",
+      "lead": "mellow electric piano lead",
+      "mood": "bittersweet dusk",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "line-cliche", "feel": "hazy",       "endingType": null,   "inst": { "lead": [],                      "harmony": ["slow string pads"],                           "rhythm": [],                              "bass": ["soft dubstep sub"],  "texture": ["tape hiss", "vinyl crackle"],     "energy": ["soft morning light feel"] } },
+        { "typeId": "verse",   "prog": "canon",       "feel": "cozy",       "endingType": null,   "inst": { "lead": ["electric piano accent"], "harmony": ["string arpeggios", "pizzicato strings"],      "rhythm": ["lazy shuffled drums"],          "bass": ["walking bass"],      "texture": [],                                "energy": [] } },
+        { "typeId": "develop", "prog": "axis",        "feel": "bittersweet","endingType": null,   "inst": { "lead": ["piano accent line"],    "harmony": ["warm synth pads", "string arpeggios"],        "rhythm": ["brushed snare", "soft claps"], "bass": ["warm sub bass"],     "texture": [],                                "energy": ["gentle energy lift"] } },
+        { "typeId": "outro",   "prog": "minor-plagal","feel": "hazy",       "endingType": "fade", "inst": { "lead": ["electric piano accent"], "harmony": ["slow string pads", "ambient breath pads"],    "rhythm": [],                              "bass": ["soft dubstep sub"],  "texture": ["warm room reverb", "tape hiss"], "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "lofi-missing-summer",
+      "name": "Missing Summer",
+      "artist": "AnoHana / Summer Memory",
+      "desc": "Nostalgic electric piano over soft strings — nat-minor verse, bittersweet chorus bloom, quiet dissolve",
+      "bpm": "76",
+      "theme": "Japanese bedroom pop lo-fi, warm nostalgic memory",
+      "lead": "mellow electric piano lead",
+      "mood": "bittersweet dusk",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "royal-road",  "feel": "bittersweet","endingType": null,       "inst": { "lead": [],                                        "harmony": ["string arpeggios"],                          "rhythm": [],                              "bass": [],                "texture": ["vinyl crackle", "tape hiss"],        "energy": ["soft morning light feel"] } },
+        { "typeId": "verse",   "prog": "nat-minor",   "feel": "hazy",       "endingType": null,       "inst": { "lead": ["electric piano accent"],                  "harmony": ["slow string pads", "ambient breath pads"],    "rhythm": ["lazy shuffled drums"],          "bass": ["warm sub bass"], "texture": [],                                   "energy": [] } },
+        { "typeId": "chorus",  "prog": "royal-road",  "feel": "bittersweet","endingType": null,       "inst": { "lead": ["electric piano accent", "piano accent line"], "harmony": ["string arpeggios", "warm synth pads"],   "rhythm": ["brushed snare", "soft claps"], "bass": ["warm sub bass"], "texture": ["golden shimmer"],                   "energy": ["airy lift", "gentle energy lift"] } },
+        { "typeId": "bridge",  "prog": "line-cliche", "feel": "still",      "endingType": null,       "inst": { "lead": [],                                        "harmony": ["ambient breath pads"],                        "rhythm": [],                              "bass": ["upright bass feel"], "texture": ["reverse swells"],               "energy": ["haunting suspension"] } },
+        { "typeId": "outro",   "prog": "line-cliche", "feel": "still",      "endingType": "dissolve", "inst": { "lead": ["sparse solo piano"],                      "harmony": ["slow string pads"],                           "rhythm": [],                              "bass": [],                "texture": ["tape hiss", "warm room reverb"],     "energy": ["warm golden fade"] } }
+      ]
+    },
+    {
+      "id": "lofi-starlight-drift",
+      "name": "Starlight Drift",
+      "artist": "Aria / Ambient Chill",
+      "desc": "Breathy flute over drone pads — suspended stillness, Dorian drift, slowest BPM, ambient dissolve",
+      "bpm": "60",
+      "theme": "lo-fi ambient anime score, slow drifting haze",
+      "lead": "breathy flute lead",
+      "mood": "sleepy melancholy",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "pedal-void", "feel": "drifting", "endingType": null,       "inst": { "lead": [],                    "harmony": ["ambient breath pads", "slow string pads"], "rhythm": [],                    "bass": ["upright bass feel"], "texture": ["vinyl crackle", "subtle noise floor"], "energy": [] } },
+        { "typeId": "develop", "prog": "dorian",     "feel": "drifting", "endingType": null,       "inst": { "lead": ["breathy flute phrase"], "harmony": ["warm synth pads", "harp arpeggios"],     "rhythm": ["lazy shuffled drums"], "bass": ["warm sub bass"],     "texture": ["tape hiss"],                           "energy": ["gentle energy lift"] } },
+        { "typeId": "outro",   "prog": "pedal-void", "feel": "still",   "endingType": "dissolve", "inst": { "lead": [],                    "harmony": ["ambient breath pads", "slow string pads"], "rhythm": [],                    "bass": ["upright bass feel"], "texture": ["vinyl crackle", "warm room reverb"],   "energy": ["warm golden fade"] } }
+      ]
+    }
+  ]
+}

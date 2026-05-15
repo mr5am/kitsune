@@ -1,5 +1,7 @@
 import { PROGS, TYPES, ENDING_TYPES, FEEL_CAMERA } from '../data';
 
+const STYLE_LIMIT = 1000;
+
 const NAME_POOLS = {
   gentle: [
     ['Reverie', 'Solace', 'Whisper', 'Serenity', 'Stillness', 'Lullaby', 'Murmur', 'Silence'],
@@ -55,17 +57,45 @@ export function buildOutputs(G, sections, exclude, feelWords, progs = PROGS) {
     sections.map(s => ENDING_TYPES.find(e => e.id === s.endingType)?.suno).filter(Boolean)
   )];
 
-  const style = [
-    G.theme,
-    `${G.bpm} BPM`,
-    G.mood,
-    G.lead,
-    ...progTokens,
-    ...allInst,
-    ...endingTokens,
-    'wide cinematic mix',
-    'instrumental only',
+  const buildStyleStr = (progParts, instParts) => [
+    G.theme, `${G.bpm} BPM`, G.mood, G.lead,
+    ...progParts, ...instParts, ...endingTokens,
+    'wide cinematic mix', 'instrumental only',
   ].join(', ');
+
+  // Attempt 1: full sunoStyle tokens + all instruments (current behaviour)
+  let style = buildStyleStr(progTokens, allInst);
+
+  if (style.length > STYLE_LIMIT) {
+    // Attempt 2: swap sunoStyle for the shorter lyricTag on each prog
+    const lyricTags = [...new Set(
+      sections.map(s => progs.find(p => p.id === s.prog)?.lyricTag).filter(Boolean)
+    )];
+    style = buildStyleStr(lyricTags, allInst);
+
+    if (style.length > STYLE_LIMIT) {
+      // Attempt 3: lyricTags + greedily fit instruments within remaining budget
+      const baseLen = [
+        G.theme, `${G.bpm} BPM`, G.mood, G.lead,
+        ...lyricTags, ...endingTokens,
+        'wide cinematic mix', 'instrumental only',
+      ].join(', ').length;
+      let budget = STYLE_LIMIT - baseLen;
+      const fittingInst = [];
+      for (const inst of allInst) {
+        const cost = 2 + inst.length; // ', ' separator + value
+        if (budget >= cost) { fittingInst.push(inst); budget -= cost; }
+      }
+      style = buildStyleStr(lyricTags, fittingInst);
+    }
+  }
+
+  // Safety: hard clip at last token boundary (extreme edge case)
+  if (style.length > STYLE_LIMIT) {
+    const clipped = style.slice(0, STYLE_LIMIT);
+    const boundary = clipped.lastIndexOf(', ');
+    style = boundary > 0 ? clipped.slice(0, boundary) : clipped;
+  }
 
   const lyricLines = ['[Instrumental]', ''];
   sections.forEach(s => {

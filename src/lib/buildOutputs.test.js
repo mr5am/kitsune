@@ -105,3 +105,47 @@ describe('Copy All format', () => {
     expect(text).toContain('\n\nLyrics:\n');
   });
 });
+
+describe('style length compression', () => {
+  const longProgs = [
+    { id: 'p1', sunoStyle: 'x'.repeat(200), lyricTag: 'lyric-one' },
+    { id: 'p2', sunoStyle: 'y'.repeat(200), lyricTag: 'lyric-two' },
+    { id: 'p3', sunoStyle: 'z'.repeat(200), lyricTag: 'lyric-three' },
+    { id: 'p4', sunoStyle: 'w'.repeat(200), lyricTag: 'lyric-four' },
+    { id: 'p5', sunoStyle: 'v'.repeat(200), lyricTag: 'lyric-five' },
+  ];
+
+  const typeIds = ['intro', 'verse', 'chorus', 'bridge', 'outro'];
+
+  function heavySec(typeId, prog) {
+    return {
+      typeId, prog, feel: 'warm', endingType: null,
+      inst: { lead: ['piano melody'], harmony: ['warm pads'], rhythm: ['brushed snare'], bass: ['warm bass'], texture: ['tape hiss'], energy: ['gentle lift'] },
+    };
+  }
+
+  const heavySections = longProgs.map((p, i) => heavySec(typeIds[i], p.id));
+
+  it('keeps style at or under 1000 chars with many long prog tokens', () => {
+    const { style } = buildOutputs(G, heavySections, '', { warm: 'tender' }, longProgs);
+    expect(style.length).toBeLessThanOrEqual(1000);
+  });
+
+  it('preserves theme and BPM after compression', () => {
+    const { style } = buildOutputs(G, heavySections, '', { warm: 'tender' }, longProgs);
+    expect(style).toContain(G.theme);
+    expect(style).toContain(`${G.bpm} BPM`);
+  });
+
+  it('uses lyricTags not sunoStyle when compression is triggered', () => {
+    const { style } = buildOutputs(G, heavySections, '', { warm: 'tender' }, longProgs);
+    expect(style).toContain('lyric-one');
+    expect(style).not.toContain('x'.repeat(200));
+  });
+
+  it('does not compress when style is already within limit', () => {
+    const { style } = buildOutputs(G, [sec('intro', 'gentle')], '', { gentle: 'soft' });
+    expect(style.length).toBeLessThanOrEqual(1000);
+    expect(style).toContain('warm yearning chord loop');
+  });
+});

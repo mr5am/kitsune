@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "settings": {
+    "theme": "math rock anime, clean guitar arpeggios, odd meter polyrhythm",
+    "lead": "clean arpeggiated guitar lead",
+    "mood": "introspective polyrhythmic intensity"
+  },
+  "pools": {
+    "themeOpts": [
+      { "v": "math rock anime, clean guitar arpeggios, odd meter polyrhythm",           "label": "Math Rock" },
+      { "v": "angular math rock anime, syncopated guitar stabs, polyrhythmic drive",    "label": "Angular Math" },
+      { "v": "Japanese math rock indie anime, intricate clean guitar, emotional dynamics", "label": "J-Math Rock" },
+      { "v": "emo math rock anime score, fingerpicked guitar, quiet-loud intensity",    "label": "Emo Math" },
+      { "v": "post-rock math anime OST, building instrumental texture, dynamic swells", "label": "Post-Math" },
+      { "v": "lo-fi math rock anime, warm clean guitar, tape hiss, nostalgic complexity", "label": "Lo-fi Math" }
+    ],
+    "leadOpts": [
+      { "v": "clean arpeggiated guitar lead",   "label": "Clean Arp Guitar" },
+      { "v": "fingerpicked clean guitar lead",  "label": "Fingerpick Guitar" },
+      { "v": "tapped harmonic guitar lead",     "label": "Tapped Guitar" },
+      { "v": "piano with clean guitar lead",    "label": "Piano + Guitar" },
+      { "v": "overdriven math rock guitar lead","label": "Math Rock Guitar" },
+      { "v": "melodic bass line lead",          "label": "Melodic Bass" }
+    ],
+    "moodOpts": [
+      { "v": "introspective polyrhythmic intensity", "label": "Introspective" },
+      { "v": "angular bittersweet momentum",         "label": "Angular" },
+      { "v": "quiet-loud emotional dynamic",         "label": "Dynamic" },
+      { "v": "tense fragmented calm",                "label": "Fragmented" }
+    ],
+    "instPool": {
+      "lead":    ["clean guitar arpeggios", "fingerpicked guitar melody", "tapped guitar harmonic", "piano accent line", "overdriven guitar lead", "sparse melodic guitar", "clean electric guitar riff"],
+      "harmony": ["clean guitar chord stabs", "string arpeggios", "warm synth pads", "open fifth guitar cluster", "pizzicato strings", "tremolo strings", "ambient breath pads"],
+      "rhythm":  ["polyrhythmic drum pattern", "syncopated hi-hats", "odd meter percussion", "driving rock drums", "half-time feel", "brushed snare", "soft claps"],
+      "bass":    ["melodic bass line", "walking bass", "slap bass groove", "pizzicato bass", "driving bass pulse", "upright bass feel"],
+      "texture": ["guitar amp warmth", "room reverb", "tape hiss", "vinyl crackle", "subtle noise floor", "feedback swell", "reverse swells"],
+      "energy":  ["quiet-loud dynamic shift", "tension riser", "explosive release", "gentle energy lift", "dramatic build", "airy lift", "haunting suspension"]
+    },
+    "feels": ["introspective", "angular", "explosive", "tender", "suspended"],
+    "feelWords": {
+      "introspective": "inward",
+      "angular":       "fractured",
+      "explosive":     "bursting",
+      "tender":        "delicate",
+      "suspended":     "hanging"
+    },
+    "exclude": "choir vocals, singing, heavy metal, trap, 8-bit, chiptune, industrial, dubstep, electronic synth pop, music box, koto, shamisen, folk instruments, lush orchestral strings, operatic choir, new age, ambient only, hip hop, brass section",
+    "progs": [
+      { "id": "pedal-void",    "name": "Still Pocket",      "sunoStyle": "sustained bass pedal anchoring floating guitar arpeggios, time suspended in an irregular pocket, post-rock stasis",                                              "lyricTag": "suspended irregular pocket",    "desc": "Bass holds still · guitar arpeggios float above",        "feel": "suspended",     "reference": "Toe — Until I Say So / City Ruins" },
+      { "id": "dorian",        "name": "Dorian Arpeggio",   "sunoStyle": "clean Dorian guitar arpeggios in odd meter, minor key lifting into warmth, the math rock glow of bittersweet introspection",                                    "lyricTag": "Dorian math rock introspection","desc": "Minor lifting into warmth · bittersweet odd-meter glow",  "feel": "introspective", "reference": "Toe — グッドバイ / Elephant Gym" },
+      { "id": "line-cliche",   "name": "Hidden Pulse",      "sunoStyle": "half-step inner voice crawling inside clean guitar voicings, subtle motion within stillness, the math rock shimmer hidden beneath static harmony",              "lyricTag": "hidden half-step pulse",        "desc": "Inner voice moves by half steps · stillness with motion", "feel": "introspective", "reference": "TTNG — Panda / math rock inner voice" },
+      { "id": "royal-road",    "name": "Quiet Swell",       "sunoStyle": "yearning chord lift over fingerpicked arpeggios, the math rock swell before the quiet, bittersweet rise settling gently in odd time",                          "lyricTag": "fingerpicked yearning swell",   "desc": "Yearning lift over arpeggios · rise and soft settle",     "feel": "tender",        "reference": "TTNG — Chinchilla / emo math swell" },
+      { "id": "axis",          "name": "Odd Axis",          "sunoStyle": "bittersweet circular chord motion in shifting meter, the J-math-rock loop that never quite resolves, tension and release cycling in odd time",                  "lyricTag": "odd-meter bittersweet loop",    "desc": "Bittersweet loop in shifting meter · never resolves",     "feel": "introspective", "reference": "Tricot — Tokyo Vampire Hotel / J-math loop" },
+      { "id": "black-adder",   "name": "Angular Stab",      "sunoStyle": "sudden jarring angular chord stab, maximum math rock tension in one struck note, the unexpected hit that resets the bar",                                       "lyricTag": "angular chord stab",           "desc": "One jarring hit · maximum math rock tension",             "feel": "angular",       "reference": "Tricot — Melon Soda / angular stab" },
+      { "id": "phrygian",      "name": "Dark Modal Edge",   "sunoStyle": "angular Phrygian darkness in clean guitar, modal tension without resolution, odd-meter dread lurking beneath intricate picking",                                "lyricTag": "Phrygian angular darkness",     "desc": "Clean modal darkness · odd-meter dread unresolved",       "feel": "angular",       "reference": "Ling tosite sigure / Envy dark modal" },
+      { "id": "secondary-dom", "name": "Harmonic Swerve",   "sunoStyle": "sudden harmonic swerve, an unexpected borrowed chord breaking the established pattern, math rock's characteristic surprise pivot",                              "lyricTag": "math rock harmonic swerve",    "desc": "Unexpected borrowed chord · the characteristic pivot",    "feel": "introspective", "reference": "American Football / math rock surprise" },
+      { "id": "modulation",    "name": "Key Fracture",      "sunoStyle": "key shifting mid-phrase under a sustained guitar note, the tonal colour fracturing and reassembling, disorienting and beautiful in irregular time",             "lyricTag": "fractured key shift",          "desc": "Key shifts mid-phrase · disorienting tonal fracture",     "feel": "angular",       "reference": "Ling tosite sigure — Katharsis / key shift" },
+      { "id": "flat-six",      "name": "Flat Six Fall",     "sunoStyle": "dark flat-six chord descent over angular guitar, heavy emotional landing on an unexpected minor chord, melancholic math rock cadence",                          "lyricTag": "dark flat-six cadence",        "desc": "Dark flat-six fall · heavy math rock landing",            "feel": "angular",       "reference": "downy / Japanese math rock dark cadence" },
+      { "id": "nat-minor",     "name": "Aeolian Cascade",  "sunoStyle": "minor chords cascading in tumbling arpeggios over complex rhythm, math rock aeolian sadness, falling figures over an asymmetric drum pattern",                 "lyricTag": "aeolian arpeggiated cascade",   "desc": "Tumbling aeolian arpeggios · sadness over asymmetric drums","feel": "introspective", "reference": "Jyocho / emotional Japanese math rock" },
+      { "id": "minor-plagal",  "name": "Math Sigh",         "sunoStyle": "minor chord breathing unexpectedly into major, a sudden math rock exhale, tension releasing into warmth mid-phrase in odd time",                               "lyricTag": "math rock exhale sigh",        "desc": "Minor exhaling into major · unexpected warmth",           "feel": "tender",        "reference": "Toe — グッドバイ / emotional resolve" },
+      { "id": "chromatic-sink","name": "Chromatic Erosion", "sunoStyle": "chromatic half-step bass descent under static clean guitar, ground eroding beneath intricate picking, math rock dread building note by note",                  "lyricTag": "chromatic bass erosion",       "desc": "Bass falls by half steps · ground eroding under guitar",  "feel": "angular",       "reference": "LITE / Envy chromatic math rock descent" }
+    ]
+  },
+  "presets": [
+    {
+      "id": "mathrock-ivory-lattice",
+      "name": "Ivory Lattice",
+      "artist": "Toe / Ling tosite sigure",
+      "desc": "Suspended pedal intro, clean Dorian verse, explosive latticed chorus, half-step bridge tension, ambient dissolve",
+      "bpm": "120",
+      "theme": "math rock anime, clean guitar arpeggios, odd meter polyrhythm",
+      "lead": "clean arpeggiated guitar lead",
+      "mood": "introspective polyrhythmic intensity",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "pedal-void",   "feel": "suspended",     "endingType": null,       "inst": { "lead": [],                                       "harmony": ["open fifth guitar cluster", "ambient breath pads"], "rhythm": [],                                           "bass": ["upright bass feel"],  "texture": ["room reverb", "subtle noise floor"], "energy": [] } },
+        { "typeId": "verse",   "prog": "dorian",       "feel": "introspective", "endingType": null,       "inst": { "lead": ["clean guitar arpeggios"],                "harmony": ["clean guitar chord stabs", "string arpeggios"],    "rhythm": ["polyrhythmic drum pattern", "syncopated hi-hats"], "bass": ["melodic bass line"],  "texture": ["guitar amp warmth"],                "energy": [] } },
+        { "typeId": "chorus",  "prog": "royal-road",   "feel": "explosive",     "endingType": null,       "inst": { "lead": ["clean guitar arpeggios", "tapped guitar harmonic"], "harmony": ["string arpeggios", "warm synth pads"],   "rhythm": ["driving rock drums", "syncopated hi-hats"],         "bass": ["driving bass pulse"], "texture": [],                                   "energy": ["quiet-loud dynamic shift", "explosive release"] } },
+        { "typeId": "bridge",  "prog": "line-cliche",  "feel": "suspended",     "endingType": null,       "inst": { "lead": ["sparse melodic guitar"],                 "harmony": ["open fifth guitar cluster"],                       "rhythm": ["half-time feel"],                                   "bass": ["melodic bass line"],  "texture": ["feedback swell"],                   "energy": ["tension riser"] } },
+        { "typeId": "outro",   "prog": "pedal-void",   "feel": "tender",        "endingType": "dissolve", "inst": { "lead": ["clean guitar arpeggios"],                "harmony": ["ambient breath pads"],                             "rhythm": [],                                                   "bass": ["upright bass feel"],  "texture": ["room reverb", "tape hiss"],          "energy": ["airy lift"] } }
+      ]
+    },
+    {
+      "id": "mathrock-fractured-clock",
+      "name": "Fractured Clock",
+      "artist": "Tricot / TK from Ling tosite sigure",
+      "desc": "Angular stab intro, Phrygian verse drive, harmonic swerve tension, odd-axis chorus eruption, cold stop",
+      "bpm": "148",
+      "theme": "angular math rock anime, syncopated guitar stabs, polyrhythmic drive",
+      "lead": "overdriven math rock guitar lead",
+      "mood": "angular bittersweet momentum",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",    "prog": "black-adder",  "feel": "angular",       "endingType": null,   "inst": { "lead": [],                                                    "harmony": ["clean guitar chord stabs"],                        "rhythm": ["odd meter percussion"],                                   "bass": ["driving bass pulse"],  "texture": ["subtle noise floor"],         "energy": ["tension riser"] } },
+        { "typeId": "verse",    "prog": "phrygian",     "feel": "angular",       "endingType": null,   "inst": { "lead": ["overdriven guitar lead"],                             "harmony": ["tremolo strings", "open fifth guitar cluster"],    "rhythm": ["polyrhythmic drum pattern", "syncopated hi-hats"],        "bass": ["driving bass pulse"],  "texture": ["guitar amp warmth"],          "energy": [] } },
+        { "typeId": "prechorus","prog": "secondary-dom","feel": "introspective", "endingType": null,   "inst": { "lead": ["piano accent line"],                                  "harmony": ["clean guitar chord stabs"],                        "rhythm": ["odd meter percussion"],                                   "bass": ["melodic bass line"],   "texture": ["room reverb"],                "energy": ["dramatic build"] } },
+        { "typeId": "chorus",   "prog": "axis",         "feel": "explosive",     "endingType": null,   "inst": { "lead": ["overdriven guitar lead", "clean electric guitar riff"], "harmony": ["string arpeggios", "warm synth pads"],          "rhythm": ["driving rock drums", "syncopated hi-hats"],               "bass": ["driving bass pulse"],  "texture": [],                             "energy": ["quiet-loud dynamic shift", "explosive release"] } },
+        { "typeId": "outro",    "prog": "phrygian",     "feel": "angular",       "endingType": "cold", "inst": { "lead": ["clean electric guitar riff"],                         "harmony": ["open fifth guitar cluster"],                       "rhythm": ["odd meter percussion"],                                   "bass": ["driving bass pulse"],  "texture": ["guitar amp warmth"],          "energy": [] } }
+      ]
+    },
+    {
+      "id": "mathrock-glass-circuitry",
+      "name": "Glass Circuitry",
+      "artist": "Elephant Gym / Jyocho",
+      "desc": "Melodic bass anchors throughout — Dorian theme, minor-plagal chorus bloom, warm ambient fade",
+      "bpm": "96",
+      "theme": "Japanese math rock indie anime, intricate clean guitar, emotional dynamics",
+      "lead": "melodic bass line lead",
+      "mood": "quiet-loud emotional dynamic",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",  "prog": "pedal-void",  "feel": "tender",        "endingType": null,   "inst": { "lead": [],                                          "harmony": ["warm synth pads", "ambient breath pads"],          "rhythm": [],                                           "bass": ["melodic bass line"],  "texture": ["room reverb"],              "energy": ["airy lift"] } },
+        { "typeId": "theme",  "prog": "dorian",      "feel": "tender",        "endingType": null,   "inst": { "lead": ["clean guitar arpeggios"],                   "harmony": ["clean guitar chord stabs", "pizzicato strings"],   "rhythm": ["brushed snare", "syncopated hi-hats"],      "bass": ["melodic bass line"],  "texture": [],                           "energy": ["gentle energy lift"] } },
+        { "typeId": "chorus", "prog": "minor-plagal", "feel": "explosive",    "endingType": null,   "inst": { "lead": ["clean guitar arpeggios", "tapped guitar harmonic"], "harmony": ["string arpeggios", "warm synth pads"],  "rhythm": ["polyrhythmic drum pattern", "driving rock drums"], "bass": ["driving bass pulse"], "texture": [],                           "energy": ["quiet-loud dynamic shift", "explosive release"] } },
+        { "typeId": "outro",  "prog": "dorian",      "feel": "tender",        "endingType": "fade", "inst": { "lead": ["clean guitar arpeggios"],                   "harmony": ["warm synth pads", "ambient breath pads"],          "rhythm": [],                                           "bass": ["melodic bass line"],  "texture": ["room reverb", "tape hiss"], "energy": ["airy lift"] } }
+      ]
+    },
+    {
+      "id": "mathrock-summer-equation",
+      "name": "Summer Equation",
+      "artist": "TTNG / American Football",
+      "desc": "Fingerpicked pastoral warmth — Axis verse, Royal Road swell chorus, aeolian suspension bridge, vinyl dissolve",
+      "bpm": "104",
+      "theme": "emo math rock anime score, fingerpicked guitar, quiet-loud intensity",
+      "lead": "fingerpicked clean guitar lead",
+      "mood": "introspective polyrhythmic intensity",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "royal-road", "feel": "tender",        "endingType": null,       "inst": { "lead": [],                                                "harmony": ["string arpeggios"],                                   "rhythm": [],                                      "bass": ["walking bass"],      "texture": ["vinyl crackle", "room reverb"],      "energy": [] } },
+        { "typeId": "verse",   "prog": "axis",       "feel": "tender",        "endingType": null,       "inst": { "lead": ["fingerpicked guitar melody"],                     "harmony": ["string arpeggios", "pizzicato strings"],              "rhythm": ["brushed snare", "soft claps"],          "bass": ["walking bass"],      "texture": ["tape hiss"],                        "energy": [] } },
+        { "typeId": "chorus",  "prog": "royal-road", "feel": "explosive",     "endingType": null,       "inst": { "lead": ["fingerpicked guitar melody", "clean guitar arpeggios"], "harmony": ["string arpeggios", "warm synth pads"],       "rhythm": ["polyrhythmic drum pattern", "soft claps"], "bass": ["melodic bass line"], "texture": [],                                   "energy": ["quiet-loud dynamic shift", "gentle energy lift"] } },
+        { "typeId": "bridge",  "prog": "nat-minor",  "feel": "suspended",     "endingType": null,       "inst": { "lead": ["sparse melodic guitar"],                          "harmony": ["open fifth guitar cluster", "ambient breath pads"],   "rhythm": ["half-time feel"],                       "bass": ["walking bass"],      "texture": ["reverse swells"],                   "energy": ["tension riser", "haunting suspension"] } },
+        { "typeId": "outro",   "prog": "axis",       "feel": "tender",        "endingType": "dissolve", "inst": { "lead": ["fingerpicked guitar melody"],                     "harmony": ["string arpeggios"],                                   "rhythm": [],                                      "bass": ["walking bass"],      "texture": ["vinyl crackle", "tape hiss"],        "energy": ["airy lift"] } }
+      ]
+    },
+    {
+      "id": "mathrock-asymptote",
+      "name": "Asymptote",
+      "artist": "Toe / Envy",
+      "desc": "Sparse pedal build into Dorian intricacy — chromatic erosion pre-chorus, key fracture chorus payoff, sustained resolution",
+      "bpm": "132",
+      "theme": "post-rock math anime OST, building instrumental texture, dynamic swells",
+      "lead": "clean arpeggiated guitar lead",
+      "mood": "quiet-loud emotional dynamic",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",    "prog": "pedal-void",     "feel": "suspended",     "endingType": null,      "inst": { "lead": [],                                          "harmony": ["ambient breath pads", "open fifth guitar cluster"],  "rhythm": [],                                                     "bass": ["upright bass feel"],  "texture": ["room reverb", "subtle noise floor"],  "energy": [] } },
+        { "typeId": "verse",    "prog": "dorian",         "feel": "introspective", "endingType": null,      "inst": { "lead": ["clean guitar arpeggios"],                   "harmony": ["open fifth guitar cluster", "warm synth pads"],      "rhythm": ["polyrhythmic drum pattern", "syncopated hi-hats"],    "bass": ["melodic bass line"],  "texture": [],                                     "energy": ["gentle energy lift"] } },
+        { "typeId": "prechorus","prog": "chromatic-sink", "feel": "introspective", "endingType": null,      "inst": { "lead": ["sparse melodic guitar"],                   "harmony": ["tremolo strings", "open fifth guitar cluster"],      "rhythm": ["odd meter percussion", "half-time feel"],             "bass": ["driving bass pulse"],  "texture": ["feedback swell"],                    "energy": ["tension riser", "dramatic build"] } },
+        { "typeId": "chorus",   "prog": "modulation",     "feel": "explosive",     "endingType": null,      "inst": { "lead": ["overdriven guitar lead", "clean guitar arpeggios"], "harmony": ["string arpeggios", "warm synth pads"],     "rhythm": ["driving rock drums", "polyrhythmic drum pattern"],    "bass": ["driving bass pulse"],  "texture": [],                                    "energy": ["quiet-loud dynamic shift", "explosive release"] } },
+        { "typeId": "outro",    "prog": "pedal-void",     "feel": "suspended",     "endingType": "sustain", "inst": { "lead": ["clean guitar arpeggios"],                   "harmony": ["warm synth pads", "ambient breath pads"],            "rhythm": [],                                                     "bass": ["upright bass feel"],  "texture": ["room reverb", "reverse swells"],      "energy": ["haunting suspension"] } }
+      ]
+    },
+    {
+      "id": "mathrock-polyrhythm-rain",
+      "name": "Polyrhythm Rain",
+      "artist": "downy / LITE",
+      "desc": "Slow lo-fi math — hidden pulse verse, flat-six chorus surge, chromatic descent bridge, tender Dorian fade",
+      "bpm": "78",
+      "theme": "lo-fi math rock anime, warm clean guitar, tape hiss, nostalgic complexity",
+      "lead": "fingerpicked clean guitar lead",
+      "mood": "tense fragmented calm",
+      "isUserPreset": true,
+      "sections": [
+        { "typeId": "intro",   "prog": "pedal-void",     "feel": "suspended",     "endingType": null,   "inst": { "lead": [],                                              "harmony": ["ambient breath pads", "warm synth pads"],         "rhythm": [],                                           "bass": ["walking bass"],      "texture": ["vinyl crackle", "tape hiss"],          "energy": [] } },
+        { "typeId": "verse",   "prog": "line-cliche",    "feel": "introspective", "endingType": null,   "inst": { "lead": ["fingerpicked guitar melody"],                   "harmony": ["string arpeggios", "clean guitar chord stabs"],   "rhythm": ["brushed snare", "polyrhythmic drum pattern"], "bass": ["walking bass"],      "texture": ["tape hiss"],                          "energy": [] } },
+        { "typeId": "chorus",  "prog": "flat-six",       "feel": "explosive",     "endingType": null,   "inst": { "lead": ["clean guitar arpeggios", "fingerpicked guitar melody"], "harmony": ["string arpeggios", "warm synth pads"],  "rhythm": ["polyrhythmic drum pattern", "syncopated hi-hats"], "bass": ["melodic bass line"], "texture": ["guitar amp warmth"],                  "energy": ["quiet-loud dynamic shift", "gentle energy lift"] } },
+        { "typeId": "bridge",  "prog": "chromatic-sink", "feel": "angular",       "endingType": null,   "inst": { "lead": ["sparse melodic guitar"],                        "harmony": ["open fifth guitar cluster", "tremolo strings"],   "rhythm": ["odd meter percussion", "half-time feel"],   "bass": ["melodic bass line"], "texture": ["feedback swell", "reverse swells"],    "energy": ["tension riser"] } },
+        { "typeId": "outro",   "prog": "dorian",         "feel": "tender",        "endingType": "fade", "inst": { "lead": ["fingerpicked guitar melody"],                   "harmony": ["ambient breath pads"],                            "rhythm": [],                                           "bass": ["walking bass"],      "texture": ["vinyl crackle", "room reverb"],        "energy": ["airy lift"] } }
+      ]
+    }
+  ]
+}
